@@ -1,0 +1,25 @@
+Agent:
+    'agente' name=ID 
+    ( ('crencas:' beliefs*=ID[','])
+    ('objetivos:' desires*=ID[','])
+    ('planos:' plans*=Plans) )#
+;
+
+Plans:
+    name=ID '(' 
+    'quando:' data=Action 
+    ('contem:' conditions*=Condition[','])? ')' 
+    'fazer' actions*=Action[','] 'encerrar'
+;
+
+Condition:
+    ctxType=ActionType name=ID
+;
+
+Action:
+    actType=ActionType name=ID
+;
+
+ActionType:
+    'acreditar' | 'desacreditar' | 'cumprir' | 'abandonar'
+;

@@ -1,0 +1,6 @@
+if __name__ == '__main__':
+    {% for agent in agents %}
+    {{ agent.name| lower() }} = {{ agent.name }}()
+    {% endfor %}
+
+    Admin().start_system()
