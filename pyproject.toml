@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "clag"
+version = "0.3.0"
+description = ""
+authors = ["Cainan Travizanutto <ctravizanutto@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "clag" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+textx = "^4.0.1"
+jinja2 = "^3.1.4"
+click = "^8.1.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+clag = "clag.cli:run"

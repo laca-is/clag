@@ -1,0 +1,5 @@
+.vscode
+.venv
+out/
+__pycache__
+*.dot
