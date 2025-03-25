@@ -5,7 +5,7 @@ description = ""
 authors = ["Cainan Travizanutto <ctravizanutto@gmail.com>"]
 readme = "README.md"
 packages = [
-    { include = "clag" }
+    { include = "src" }
 ]
 
 [tool.poetry.dependencies]
@@ -19,4 +19,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-clag = "clag.cli:run"
+clag = "src.cli:run"

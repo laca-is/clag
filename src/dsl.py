@@ -2,7 +2,7 @@ import textx
 import jinja2
 import click
 from os.path import dirname
-import clag.filters
+import src.filters
 
 file_name = dirname(__file__)
 
@@ -27,9 +27,9 @@ def build_output_file(agents, envs, output_file):
         loader=jinja2.FileSystemLoader(file_name),
         trim_blocks=True, lstrip_blocks=True
     )
-    jinja_env.filters['contextType'] = clag.filters.context_type_to_str
-    jinja_env.filters['conditionsStr'] = clag.filters.conditions_to_str
-    jinja_env.filters['changeStr'] = clag.filters.change_to_srt
+    jinja_env.filters['contextType'] = src.filters.context_type_to_str
+    jinja_env.filters['conditionsStr'] = src.filters.conditions_to_str
+    jinja_env.filters['changeStr'] = src.filters.change_to_srt
 
     agent_jinja_template = jinja_env.get_template('templates/agentTemplate.py.jinja')
     env_jinja_template = jinja_env.get_template('templates/envTemplate.py.jinja')

@@ -1,7 +1,7 @@
 import click
 
-_belief_ctx_types = ['acreditar', 'desacreditar']
-_goal_ctx_types = ['cumprir', 'abandonar']
+_belief_ctx_types = ['believe', 'disbelieve']
+_goal_ctx_types = ['achieve', 'abandon']
 
 def context_type_to_str(context, contextType):
     if contextType in _belief_ctx_types:
