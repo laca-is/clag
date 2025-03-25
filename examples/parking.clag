@@ -1,0 +1,26 @@
+agent Driver
+beliefs: Budget
+plans: 
+    CheckPrice(
+        when: achieve CheckPrice 
+        contains: believe Budget)
+    do
+        achieve OfferMade
+    end
+
+    NoSpots(
+        when: achieve NoSpotsAvailable )
+    do
+        disbelieve Parking
+    end
+
+environment Parking
+perceptions: SoldSpots
+actions:
+    ParkSpot do
+        percept Spot
+    end
+
+    LeaveSpot do
+        change Spot
+    end

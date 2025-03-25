@@ -4,8 +4,7 @@ beliefs: HasCoffeeBeans
 plans: 
     ExpressoReady(
         when: achieve MakeExpressoCoffee 
-        contains: believe HasCoffeeBeans
-        )
+        contains: believe HasCoffeeBeans)
     do
         achieve MakeCoffee,
         abandon MakeExpressoCoffee
