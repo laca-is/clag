@@ -1,13 +1,12 @@
 agent Driver
 beliefs: Budget
-plans: 
+plans:
     CheckPrice(
         when: achieve CheckPrice 
         contains: believe Budget)
     do
         achieve OfferMade
-    end
-
+    end,
     NoSpots(
         when: achieve NoSpotsAvailable )
     do
@@ -19,8 +18,7 @@ perceptions: SoldSpots
 actions:
     ParkSpot do
         percept Spot
-    end
-
+    end,
     LeaveSpot do
         change Spot
     end
