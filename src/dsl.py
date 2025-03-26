@@ -1,43 +1,151 @@
-import textx
+import antlr4
+from antlr4 import *
 import jinja2
 import click
-from os.path import dirname
+import os
+from os.path import dirname, join
 import src.filters
+from .antlr.ClagLexer import ClagLexer
+from .antlr.ClagParser import ClagParser
+from .antlr.ClagParserListener import ClagParserListener
+from antlr4.error.ErrorListener import ErrorListener
+
+# Define data classes for agents/environments
+class Agent:
+    def __init__(self, name):
+        self.name = name
+        self.beliefs = []
+        self.desires = []
+        self.plans = []
+
+class Environment:
+    def __init__(self, name):
+        self.name = name
+        self.perceptions = []
+        self.actions = []
 
 file_name = dirname(__file__)
 
-def parse_file(file):
-    # load the textx metamodel and system model
-    system_metamodel = textx.metamodel_from_file(
-        file_name=f'{file_name}/grammar/system.tx')
-    try:
-        system_model = system_metamodel.model_from_file(file)
-    except textx.TextXSyntaxError as e:
-        click.echo(f'[ERROR] {e.message} at * position: "{e.context}"')
-        exit()
+class CustomErrorListener(ErrorListener):
+    def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
+        raise Exception(f"Syntax error at line {line}:{column} - {msg}")
 
-    agents = system_model.agents
-    envs = system_model.envs
-         
-    return (agents, envs)
+class DSLListener(ClagParserListener):
+    def __init__(self):
+        self.agents = []
+        self.envs = []
+        self.current_agent = None
+        self.current_env = None
+
+    def enterAgent(self, ctx):
+        self.current_agent = Agent(ctx.ID().getText())
+
+    def exitAgent(self, ctx):
+        self.agents.append(self.current_agent)
+        self.current_agent = None
+
+    def enterBeliefs(self, ctx):
+        if self.current_agent:
+            self.current_agent.beliefs = [t.getText() for t in ctx.id_list().ID()]
+
+    def enterDesires(self, ctx):
+        if self.current_agent:
+            self.current_agent.desires = [t.getText() for t in ctx.id_list().ID()]
+
+    def enterAgent_plan(self, ctx):
+        if self.current_agent:
+            plan = {
+                "name": ctx.ID().getText(),
+                "when": self._parse_action(ctx.action()),
+                "conditions": [self._parse_condition(c) for c in ctx.condition_list().condition()] if ctx.condition_list() else [],
+                "actions": [self._parse_action(a) for a in ctx.action_list().action()]
+            }
+            self.current_agent.plans.append(plan)
+
+    def _parse_action(self, ctx):
+        return f"{ctx.agent_action_type().getText()} {ctx.ID().getText()}"
+
+    def _parse_condition(self, ctx):
+        return f"{ctx.agent_action_type().getText()} {ctx.ID().getText()}"
+
+    def enterEnvironment(self, ctx):
+        self.current_env = Environment(ctx.ID().getText())
+
+    def exitEnvironment(self, ctx):
+        self.envs.append(self.current_env)
+        self.current_env = None
+
+    def enterPerceptions(self, ctx):
+        if self.current_env:
+            self.current_env.perceptions = [t.getText() for t in ctx.id_list().ID()]
+
+    def enterEnvironment_plan(self, ctx):
+        if self.current_env:
+            action = {
+                "name": ctx.ID().getText(),
+                "actions": [self._parse_env_action(a) for a in ctx.env_action_list().env_action()]
+            }
+            self.current_env.actions.append(action)
+
+    # Helper methods
+    def _parse_action(self, ctx):
+        return f"{ctx.agent_action_type().getText()} {ctx.ID().getText()}"
+
+    def _parse_condition(self, ctx):
+        return f"{ctx.agent_action_type().getText()} {ctx.ID().getText()}"
+    
+    def _parse_env_action(self, ctx):
+        return f"{ctx.env_action_type().getText()} {ctx.ID().getText()}"
+
+def parse_file(file):
+    input_stream = FileStream(file)
+    lexer = ClagLexer(input_stream)
+    stream = CommonTokenStream(lexer)
+    parser = ClagParser(stream)
+    
+    # Error handling
+    error_listener = CustomErrorListener()
+    lexer.removeErrorListeners()
+    parser.removeErrorListeners()
+    lexer.addErrorListener(error_listener)
+    parser.addErrorListener(error_listener)
+    
+    try:
+        parse_tree = parser.system()
+    except Exception as e:
+        click.echo(f'[ERROR] {str(e)}')
+        exit(1)
+    
+    listener = DSLListener()
+    walker = ParseTreeWalker()
+    walker.walk(listener, parse_tree)
+    
+    return (listener.agents, listener.envs)
 
 def build_output_file(agents, envs, output_file):
-    # set up jinja2 env and load templates
+    # Jinja setup remains similar to original
     jinja_env = jinja2.Environment(
-        loader=jinja2.FileSystemLoader(file_name),
+        loader=jinja2.FileSystemLoader(join(file_name, "templates")),
         trim_blocks=True, lstrip_blocks=True
     )
-    jinja_env.filters['contextType'] = src.filters.context_type_to_str
-    jinja_env.filters['conditionsStr'] = src.filters.conditions_to_str
-    jinja_env.filters['changeStr'] = src.filters.change_to_srt
-
-    agent_jinja_template = jinja_env.get_template('templates/agentTemplate.py.jinja')
-    env_jinja_template = jinja_env.get_template('templates/envTemplate.py.jinja')
-    main_jinja_template = jinja_env.get_template('templates/mainTemplate.py.jinja')
-
+    jinja_env.filters.update({
+        'contextType': src.filters.context_type_to_str,
+        'conditionsStr': src.filters.conditions_to_str,
+        'changeStr': src.filters.change_to_srt
+    })
+    agent_jinja_template = jinja_env.get_template('agentTemplate.py.jinja')
+    env_jinja_template = jinja_env.get_template('envTemplate.py.jinja')
+    main_jinja_template = jinja_env.get_template('mainTemplate.py.jinja')
     with open(output_file, 'w') as f:
         f.write('from maspy import *\n')
         f.write(agent_jinja_template.render(agents=agents))
         f.write(env_jinja_template.render(envs=envs))
         f.write('# autogenerated by clag\n# (c) cainan - utfpr 2024\n')
         f.write(main_jinja_template.render(agents=agents))
+
+if __name__ == "__main__":
+    # Test parsing
+    print("Parsing file...")
+    agents, envs = parse_file("parking.txt")
+    print(agents, envs)
+    build_output_file(agents, envs, "output.py")

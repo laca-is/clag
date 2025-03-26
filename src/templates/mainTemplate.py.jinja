@@ -1,6 +1,10 @@
 if __name__ == '__main__':
     {% for agent in agents %}
-    {{ agent.name| lower() }} = {{ agent.name }}()
+    {{ agent.name|lower }} = {{ agent.name }}Agent('{{ agent.name|lower }}')
+    {% endfor %}
+    
+    {% for env in envs %}
+    {{ env.name|lower }}_env = {{ env.name }}Environment('{{ env.name|lower }}_env')
     {% endfor %}
 
     Admin().start_system()

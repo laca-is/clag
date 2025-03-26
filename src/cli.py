@@ -11,6 +11,7 @@ def run():
 @click.option('--output_file', '-o', default='out.py', help='Change output file name.')
 def build(file_name, output_file):
     agents, envs = src.dsl.parse_file(file_name)
+    print(agents, envs)
     src.dsl.build_output_file(agents, envs, output_file)
     
 # debug purposes
