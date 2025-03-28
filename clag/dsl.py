@@ -1,10 +1,8 @@
-import antlr4
 from antlr4 import *
 import jinja2
 import click
-import os
 from os.path import dirname, join
-import src.filters
+import clag.filters
 from .antlr.ClagLexer import ClagLexer
 from .antlr.ClagParser import ClagParser
 from .antlr.ClagParserListener import ClagParserListener
@@ -128,11 +126,13 @@ def build_output_file(agents, envs, output_file):
         loader=jinja2.FileSystemLoader(join(file_name, "templates")),
         trim_blocks=True, lstrip_blocks=True
     )
+
     jinja_env.filters.update({
-        'contextType': src.filters.context_type_to_str,
-        'conditionsStr': src.filters.conditions_to_str,
-        'changeStr': src.filters.change_to_srt
+        'contextType': clag.filters.context_type_to_str,
+        'conditionsStr': clag.filters.conditions_to_str,
+        'changeStr': clag.filters.change_to_srt
     })
+
     agent_jinja_template = jinja_env.get_template('agentTemplate.py.jinja')
     env_jinja_template = jinja_env.get_template('envTemplate.py.jinja')
     main_jinja_template = jinja_env.get_template('mainTemplate.py.jinja')
@@ -141,10 +141,3 @@ def build_output_file(agents, envs, output_file):
         f.write(agent_jinja_template.render(agents=agents))
         f.write(env_jinja_template.render(envs=envs))
         f.write(main_jinja_template.render(agents=agents))
-
-if __name__ == "__main__":
-    # Test parsing
-    print("Parsing file...")
-    agents, envs = parse_file("parking.txt")
-    print(agents, envs)
-    build_output_file(agents, envs, "output.py")
