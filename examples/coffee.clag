@@ -30,4 +30,8 @@ plans:
 
 environment CoffeeShop
 perceptions: HasCoffee
-actions: BuyCoffeeBeans
+actions: 
+    BuyCoffeeBeans
+    do
+        percept CoffeePrice
+    end
