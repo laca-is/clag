@@ -1,9 +1,10 @@
 agent Driver
 beliefs: Budget
+desires: CheckPrice
 plans:
     CheckPrice(
         when: achieve CheckPrice 
-        contains: believe Budget)
+        contains: believe Budget, achieve Parking)
     do
         achieve OfferMade
     end

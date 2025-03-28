@@ -1,0 +1,9 @@
+agent DummyAgent
+beliefs: Box
+desires: move_boxes
+plans:
+    move_to_pos(when: achieve move_boxes
+                contains: believe Box)
+    do
+        achieve BoxMoved
+    end
