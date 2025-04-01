@@ -9,7 +9,7 @@ class {{ env.name }}Environment(Environment):
     {% for action in env.actions %}
     def {{ action.name }}(self, src):
         {% for act in action.actions %}
-        self.{{ act.split()[0]|changeStr(False) }}({{ act.split()[1]|contextType(act.split()[0]) }})
+        self.{{ act.split()[0]|changeStr(False) }}({{ act.split()[1]|dataType(act.split()[0]) }})
         {% endfor %}
     {% endfor %}
 

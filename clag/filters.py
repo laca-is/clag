@@ -3,12 +3,12 @@ import click
 _belief_ctx_types = ['believe', 'disbelieve']
 _goal_ctx_types = ['achieve', 'abandon']
 
-def context_type_to_str(context, contextType):
+def data_type_to_str(data):
     """Handle context strings from split action/condition components"""
-    if contextType in _belief_ctx_types:
-        return f'Belief("{context}")'
-    if contextType in _goal_ctx_types:
-        return f'Goal("{context}")'
+    print(data)
+    if data[0].BELIEVES():
+        return f'Belief({data[1]})'
+    return data
     
     click.echo(f'[ERROR] Invalid operation: {contextType} {context}')
     exit()

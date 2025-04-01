@@ -3,9 +3,9 @@ import jinja2
 import click
 from os.path import dirname, join
 import clag.filters
-from .antlr.ClagLexer import ClagLexer
-from .antlr.ClagParser import ClagParser
-from .antlr.ClagParserListener import ClagParserListener
+from clag.antlr.ClagLexer import ClagLexer
+from clag.antlr.ClagParser import ClagParser
+from clag.antlr.ClagParserListener import ClagParserListener
 from antlr4.error.ErrorListener import ErrorListener
 
 # Define data classes for agents/environments
@@ -15,6 +15,8 @@ class Agent:
         self.beliefs = []
         self.desires = []
         self.plans = []
+        self.channel = None
+        self.environment = None
 
 class Environment:
     def __init__(self, name):
@@ -28,72 +30,51 @@ class CustomErrorListener(ErrorListener):
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
         raise Exception(f"Syntax error at line {line}:{column} - {msg}")
 
-class DSLListener(ClagParserListener):
+class ClagListener(ClagParserListener):
     def __init__(self):
         self.agents = []
         self.envs = []
         self.current_agent = None
         self.current_env = None
 
-    def enterAgent(self, ctx):
+    def enterAgentDef(self, ctx):
         self.current_agent = Agent(ctx.ID().getText())
 
-    def exitAgent(self, ctx):
+    def exitAgentDef(self, ctx):
         self.agents.append(self.current_agent)
         self.current_agent = None
 
-    def enterBeliefs(self, ctx):
-        if self.current_agent:
-            self.current_agent.beliefs = [t.getText() for t in ctx.id_list().ID()]
+    def enterAgentSection(self, ctx):
+        if ctx.BELIEVES():
+            self.current_agent.beliefs = [t.getText() for t in ctx.idList().ID()]
+        elif ctx.DESIRES():
+            self.current_agent.desires = [t.getText() for t in ctx.idList().ID()]
+        elif ctx.CHANNEL():
+            self.current_agent.channel = ctx.getText()
+        elif ctx.ENVIRONMENT():
+            self.current_agent.environment = ctx.getText()
 
-    def enterDesires(self, ctx):
-        if self.current_agent:
-            self.current_agent.desires = [t.getText() for t in ctx.id_list().ID()]
-
-    def enterAgent_plan(self, ctx):
+    def enterPlan(self, ctx):
         if self.current_agent:
             plan = {
                 "name": ctx.ID().getText(),
-                "when": self._parse_action(ctx.action()),
-                "conditions": [self._parse_condition(c) for c in ctx.condition_list().condition()] if ctx.condition_list() else [],
-                "actions": [self._parse_action(a) for a in ctx.action_list().action()]
+                "conditions": [(c, c.ID().getText()) for c in ctx.conditionList().actionType()],
+                "context": [(c, c.ID().getText()) for c in ctx.contextList().actionType()] if ctx.contextList() else [],
+                "actions": [a.getText() for a in ctx.actionList().action()],
             }
             self.current_agent.plans.append(plan)
 
-    def _parse_action(self, ctx):
-        return f"{ctx.agent_action_type().getText()} {ctx.ID().getText()}"
-
-    def _parse_condition(self, ctx):
-        return f"{ctx.agent_action_type().getText()} {ctx.ID().getText()}"
-
-    def enterEnvironment(self, ctx):
-        self.current_env = Environment(ctx.ID().getText())
-
-    def exitEnvironment(self, ctx):
-        self.envs.append(self.current_env)
-        self.current_env = None
-
-    def enterPerceptions(self, ctx):
-        if self.current_env:
-            self.current_env.perceptions = [t.getText() for t in ctx.id_list().ID()]
-
-    def enterEnvironment_plan(self, ctx):
+    def enterAction(self, ctx):
         if self.current_env:
             action = {
-                "name": ctx.ID().getText(),
-                "actions": [self._parse_env_action(a) for a in ctx.env_action_list().env_action()]
+                "type": "send" if ctx.SEND() else "action",
+                "details": ctx.getText()
             }
             self.current_env.actions.append(action)
 
-    # Helper methods
-    def _parse_action(self, ctx):
-        return f"{ctx.agent_action_type().getText()} {ctx.ID().getText()}"
-
-    def _parse_condition(self, ctx):
-        return f"{ctx.agent_action_type().getText()} {ctx.ID().getText()}"
-    
-    def _parse_env_action(self, ctx):
-        return f"{ctx.env_action_type().getText()} {ctx.ID().getText()}"
+    def enterEnvironmentSection(self, ctx):
+        if self.current_env and ctx.THAT() and ctx.PERCEIVES():
+            self.current_env.perceptions = [t.getText() for t in ctx.idList().ID()]
 
 def parse_file(file):
     input_stream = FileStream(file)
@@ -114,7 +95,7 @@ def parse_file(file):
         click.echo(f'[ERROR] {str(e)}')
         exit(1)
     
-    listener = DSLListener()
+    listener = ClagListener()
     walker = ParseTreeWalker()
     walker.walk(listener, parse_tree)
     
@@ -128,7 +109,7 @@ def build_output_file(agents, envs, output_file):
     )
 
     jinja_env.filters.update({
-        'contextType': clag.filters.context_type_to_str,
+        'dataType': clag.filters.data_type_to_str,
         'conditionsStr': clag.filters.conditions_to_str,
         'changeStr': clag.filters.change_to_srt
     })

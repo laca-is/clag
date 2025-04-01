@@ -12,6 +12,9 @@ WITH:          [wW]'ith';
 VIA:           [vV]'ia';
 TO:            [tT]'o';
 IN:            [iI]'n';
+USING:         [uU]'sing';
+CHANNEL:       [cC]'hannel';
+PLANS:         [pP]'lans';
 
 ACHIEVE:       [aA]'chieve';
 ABANDON:       [aA]'bandon';
@@ -21,5 +24,6 @@ SEND:          [sS]'end';
 
 COMMA:        ',';
 DOT:          '.';
+AND:          'and' | 'AND';
 ID:           [a-zA-Z_][a-zA-Z0-9_]*;
 WS:           [ \t\r\n]+ -> skip;

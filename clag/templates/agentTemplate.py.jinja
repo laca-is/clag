@@ -10,14 +10,21 @@ class {{ agent.name }}Agent(Agent):
         {% endfor %}
 
     {% for plan in agent.plans %}
-    @pl({{ plan.when.split()[0]|changeStr(True) }}, {{ plan.when.split()[1]|contextType(plan.when.split()[0]) }}{% if plan.conditions %}{{ plan.conditions|conditionsStr() }}{% endif %})
+    @pl(gain, {{plan.conditions|dataType}}{% if plan.context %}, {{ plan.context|dataType }}{% endif %})
     def {{ plan.name }}(self, src):
         {% for action in plan.actions %}
-        self.{{ action.split()[0]|changeStr(False) }}({{ action.split()[1]|contextType(action.split()[0]) }})
-        {% else %}
-        pass
+        {% if action.type == 'send' %}
+        self.send(
+            content={{ action.message|dataType }},
+            receiver={{ action.receiver }},
+            protocol='{{ action.protocol }}'
+        )
+        {% elif action.type == 'receive' %}
+        self.handle_message(
+            message_type={{ action.message|dataType }},
+            handler=self.{{ action.handler }}
+        ){% endif %}
         {% endfor %}
-        
     {% endfor %}
-    
+
 {% endfor %}

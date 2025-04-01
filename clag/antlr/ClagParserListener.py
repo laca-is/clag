@@ -1,4 +1,4 @@
-# Generated from ClagParser.g4 by ANTLR 4.13.2
+# Generated from clag/antlr/ClagParser.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
     from .ClagParser import ClagParser
@@ -71,21 +71,21 @@ class ClagParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ClagParser#condition.
-    def enterCondition(self, ctx:ClagParser.ConditionContext):
-        pass
-
-    # Exit a parse tree produced by ClagParser#condition.
-    def exitCondition(self, ctx:ClagParser.ConditionContext):
-        pass
-
-
     # Enter a parse tree produced by ClagParser#conditionList.
     def enterConditionList(self, ctx:ClagParser.ConditionListContext):
         pass
 
     # Exit a parse tree produced by ClagParser#conditionList.
     def exitConditionList(self, ctx:ClagParser.ConditionListContext):
+        pass
+
+
+    # Enter a parse tree produced by ClagParser#contextList.
+    def enterContextList(self, ctx:ClagParser.ContextListContext):
+        pass
+
+    # Exit a parse tree produced by ClagParser#contextList.
+    def exitContextList(self, ctx:ClagParser.ContextListContext):
         pass
 
 

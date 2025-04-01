@@ -5,10 +5,11 @@ system: (agentDef | environmentDef)+;
 
 agentDef: AGENT ID agentSection+;
 agentSection:
-    THAT BELIEVES idList
-  | THAT DESIRES TO idList
+  DESIRES TO idList AND?
+  | BELIEVES idList AND?
   | IN ENVIRONMENT ID
-  | WITH plan+
+  | USING CHANNEL ID
+  | WITH PLANS plan+
 ;
 
 environmentDef: ENVIRONMENT ID environmentSection+;
@@ -17,16 +18,16 @@ environmentSection:
   | WITH action+
 ;
 
-plan: ID WHEN conditionList THEN actionList DOT;
+plan: ID WHEN conditionList (WITH contextList)? THEN actionList DOT;
 
 idList: ID (COMMA ID)*;
-condition: actionType ID;
-conditionList: condition (COMMA condition)*;
+conditionList: actionType (COMMA actionType)*;
+contextList: actionType (COMMA actionType)*;
 actionList: action (COMMA action)*;
 action: 
     actionType
   | sendAction
 ;
 
-sendAction: SEND ID actionType ID (VIA ID)?;
-actionType: (ACHIEVE | ABANDON | BELIEVES | PERCEPT | CHANGE) ID;
+sendAction: SEND ID actionType (VIA ID)?;
+actionType: (ACHIEVE | ABANDON | BELIEVES | PERCEPT | CHANGE | DESIRES TO) ID;
