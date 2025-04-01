@@ -10,59 +10,53 @@ else:
 
 def serializedATN():
     return [
-        4,1,23,168,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,34,144,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
-        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
-        7,20,2,21,7,21,1,0,5,0,46,8,0,10,0,12,0,49,9,0,1,1,1,1,3,1,53,8,
-        1,1,2,1,2,1,2,5,2,58,8,2,10,2,12,2,61,9,2,1,3,1,3,1,3,3,3,66,8,3,
-        1,4,1,4,1,4,1,5,1,5,1,5,1,6,1,6,5,6,76,8,6,10,6,12,6,79,9,6,1,7,
-        1,7,1,7,1,7,1,7,1,7,3,7,87,8,7,1,7,1,7,1,7,1,7,1,7,1,8,1,8,1,8,5,
-        8,97,8,8,10,8,12,8,100,9,8,1,9,1,9,1,9,1,10,1,10,1,10,1,11,1,11,
-        1,11,5,11,111,8,11,10,11,12,11,114,9,11,1,12,1,12,1,13,1,13,1,13,
-        5,13,121,8,13,10,13,12,13,124,9,13,1,14,1,14,3,14,128,8,14,1,15,
-        1,15,1,15,1,16,1,16,1,16,1,16,5,16,137,8,16,10,16,12,16,140,9,16,
-        1,17,1,17,1,17,1,17,1,17,1,18,1,18,1,18,5,18,150,8,18,10,18,12,18,
-        153,9,18,1,19,1,19,1,19,1,20,1,20,1,21,1,21,1,21,5,21,163,8,21,10,
-        21,12,21,166,9,21,1,21,0,0,22,0,2,4,6,8,10,12,14,16,18,20,22,24,
-        26,28,30,32,34,36,38,40,42,0,2,1,0,9,12,1,0,16,17,159,0,47,1,0,0,
-        0,2,52,1,0,0,0,4,54,1,0,0,0,6,65,1,0,0,0,8,67,1,0,0,0,10,70,1,0,
-        0,0,12,73,1,0,0,0,14,80,1,0,0,0,16,93,1,0,0,0,18,101,1,0,0,0,20,
-        104,1,0,0,0,22,107,1,0,0,0,24,115,1,0,0,0,26,117,1,0,0,0,28,127,
-        1,0,0,0,30,129,1,0,0,0,32,132,1,0,0,0,34,141,1,0,0,0,36,146,1,0,
-        0,0,38,154,1,0,0,0,40,157,1,0,0,0,42,159,1,0,0,0,44,46,3,2,1,0,45,
-        44,1,0,0,0,46,49,1,0,0,0,47,45,1,0,0,0,47,48,1,0,0,0,48,1,1,0,0,
-        0,49,47,1,0,0,0,50,53,3,4,2,0,51,53,3,26,13,0,52,50,1,0,0,0,52,51,
-        1,0,0,0,53,3,1,0,0,0,54,55,5,1,0,0,55,59,5,18,0,0,56,58,3,6,3,0,
-        57,56,1,0,0,0,58,61,1,0,0,0,59,57,1,0,0,0,59,60,1,0,0,0,60,5,1,0,
-        0,0,61,59,1,0,0,0,62,66,3,8,4,0,63,66,3,10,5,0,64,66,3,12,6,0,65,
-        62,1,0,0,0,65,63,1,0,0,0,65,64,1,0,0,0,66,7,1,0,0,0,67,68,5,2,0,
-        0,68,69,3,42,21,0,69,9,1,0,0,0,70,71,5,3,0,0,71,72,3,42,21,0,72,
-        11,1,0,0,0,73,77,5,4,0,0,74,76,3,14,7,0,75,74,1,0,0,0,76,79,1,0,
-        0,0,77,75,1,0,0,0,77,78,1,0,0,0,78,13,1,0,0,0,79,77,1,0,0,0,80,81,
-        5,18,0,0,81,82,5,20,0,0,82,83,5,5,0,0,83,86,3,20,10,0,84,85,5,6,
-        0,0,85,87,3,16,8,0,86,84,1,0,0,0,86,87,1,0,0,0,87,88,1,0,0,0,88,
-        89,5,21,0,0,89,90,5,7,0,0,90,91,3,22,11,0,91,92,5,8,0,0,92,15,1,
-        0,0,0,93,98,3,18,9,0,94,95,5,19,0,0,95,97,3,18,9,0,96,94,1,0,0,0,
-        97,100,1,0,0,0,98,96,1,0,0,0,98,99,1,0,0,0,99,17,1,0,0,0,100,98,
-        1,0,0,0,101,102,3,24,12,0,102,103,5,18,0,0,103,19,1,0,0,0,104,105,
-        3,24,12,0,105,106,5,18,0,0,106,21,1,0,0,0,107,112,3,20,10,0,108,
-        109,5,19,0,0,109,111,3,20,10,0,110,108,1,0,0,0,111,114,1,0,0,0,112,
-        110,1,0,0,0,112,113,1,0,0,0,113,23,1,0,0,0,114,112,1,0,0,0,115,116,
-        7,0,0,0,116,25,1,0,0,0,117,118,5,13,0,0,118,122,5,18,0,0,119,121,
-        3,28,14,0,120,119,1,0,0,0,121,124,1,0,0,0,122,120,1,0,0,0,122,123,
-        1,0,0,0,123,27,1,0,0,0,124,122,1,0,0,0,125,128,3,30,15,0,126,128,
-        3,32,16,0,127,125,1,0,0,0,127,126,1,0,0,0,128,29,1,0,0,0,129,130,
-        5,14,0,0,130,131,3,42,21,0,131,31,1,0,0,0,132,133,5,15,0,0,133,138,
-        3,34,17,0,134,135,5,19,0,0,135,137,3,34,17,0,136,134,1,0,0,0,137,
-        140,1,0,0,0,138,136,1,0,0,0,138,139,1,0,0,0,139,33,1,0,0,0,140,138,
-        1,0,0,0,141,142,5,18,0,0,142,143,5,7,0,0,143,144,3,36,18,0,144,145,
-        5,8,0,0,145,35,1,0,0,0,146,151,3,38,19,0,147,148,5,19,0,0,148,150,
-        3,38,19,0,149,147,1,0,0,0,150,153,1,0,0,0,151,149,1,0,0,0,151,152,
-        1,0,0,0,152,37,1,0,0,0,153,151,1,0,0,0,154,155,3,40,20,0,155,156,
-        5,18,0,0,156,39,1,0,0,0,157,158,7,1,0,0,158,41,1,0,0,0,159,164,5,
-        18,0,0,160,161,5,19,0,0,161,163,5,18,0,0,162,160,1,0,0,0,163,166,
-        1,0,0,0,164,162,1,0,0,0,164,165,1,0,0,0,165,43,1,0,0,0,166,164,1,
-        0,0,0,13,47,52,59,65,77,86,98,112,122,127,138,151,164
+        1,0,1,0,4,0,31,8,0,11,0,12,0,32,1,1,1,1,1,1,4,1,38,8,1,11,1,12,1,
+        39,1,2,1,2,1,2,1,2,3,2,46,8,2,1,2,1,2,1,2,1,2,1,2,3,2,53,8,2,1,2,
+        1,2,1,2,4,2,58,8,2,11,2,12,2,59,1,2,1,2,1,2,3,2,65,8,2,1,3,1,3,1,
+        3,4,3,70,8,3,11,3,12,3,71,1,4,1,4,1,4,1,4,3,4,78,8,4,1,4,1,4,1,4,
+        4,4,83,8,4,11,4,12,4,84,3,4,87,8,4,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,
+        6,1,6,1,6,1,6,1,6,1,7,1,7,1,7,5,7,104,8,7,10,7,12,7,107,9,7,1,8,
+        1,8,1,8,1,9,1,9,1,9,5,9,115,8,9,10,9,12,9,118,9,9,1,10,1,10,1,10,
+        5,10,123,8,10,10,10,12,10,126,9,10,1,11,1,11,1,11,1,11,3,11,132,
+        8,11,1,12,1,12,1,12,1,12,1,12,1,12,3,12,140,8,12,1,13,1,13,1,13,
+        0,0,14,0,2,4,6,8,10,12,14,16,18,20,22,24,26,0,1,2,0,4,4,19,23,147,
+        0,30,1,0,0,0,2,34,1,0,0,0,4,64,1,0,0,0,6,66,1,0,0,0,8,86,1,0,0,0,
+        10,88,1,0,0,0,12,95,1,0,0,0,14,100,1,0,0,0,16,108,1,0,0,0,18,111,
+        1,0,0,0,20,119,1,0,0,0,22,131,1,0,0,0,24,133,1,0,0,0,26,141,1,0,
+        0,0,28,31,3,2,1,0,29,31,3,6,3,0,30,28,1,0,0,0,30,29,1,0,0,0,31,32,
+        1,0,0,0,32,30,1,0,0,0,32,33,1,0,0,0,33,1,1,0,0,0,34,35,5,1,0,0,35,
+        37,5,33,0,0,36,38,3,4,2,0,37,36,1,0,0,0,38,39,1,0,0,0,39,37,1,0,
+        0,0,39,40,1,0,0,0,40,3,1,0,0,0,41,42,5,3,0,0,42,43,5,4,0,0,43,45,
+        3,14,7,0,44,46,5,13,0,0,45,44,1,0,0,0,45,46,1,0,0,0,46,65,1,0,0,
+        0,47,48,5,3,0,0,48,49,5,5,0,0,49,50,5,27,0,0,50,52,3,14,7,0,51,53,
+        5,13,0,0,52,51,1,0,0,0,52,53,1,0,0,0,53,65,1,0,0,0,54,55,5,12,0,
+        0,55,57,5,14,0,0,56,58,3,10,5,0,57,56,1,0,0,0,58,59,1,0,0,0,59,57,
+        1,0,0,0,59,60,1,0,0,0,60,65,1,0,0,0,61,62,5,16,0,0,62,63,5,30,0,
+        0,63,65,5,33,0,0,64,41,1,0,0,0,64,47,1,0,0,0,64,54,1,0,0,0,64,61,
+        1,0,0,0,65,5,1,0,0,0,66,67,5,2,0,0,67,69,5,33,0,0,68,70,3,8,4,0,
+        69,68,1,0,0,0,70,71,1,0,0,0,71,69,1,0,0,0,71,72,1,0,0,0,72,7,1,0,
+        0,0,73,74,5,3,0,0,74,75,5,10,0,0,75,77,3,14,7,0,76,78,5,13,0,0,77,
+        76,1,0,0,0,77,78,1,0,0,0,78,87,1,0,0,0,79,80,5,12,0,0,80,82,5,15,
+        0,0,81,83,3,12,6,0,82,81,1,0,0,0,83,84,1,0,0,0,84,82,1,0,0,0,84,
+        85,1,0,0,0,85,87,1,0,0,0,86,73,1,0,0,0,86,79,1,0,0,0,87,9,1,0,0,
+        0,88,89,5,33,0,0,89,90,5,6,0,0,90,91,3,18,9,0,91,92,5,8,0,0,92,93,
+        3,20,10,0,93,94,5,32,0,0,94,11,1,0,0,0,95,96,5,9,0,0,96,97,5,33,
+        0,0,97,98,3,20,10,0,98,99,5,32,0,0,99,13,1,0,0,0,100,105,5,33,0,
+        0,101,102,5,31,0,0,102,104,5,33,0,0,103,101,1,0,0,0,104,107,1,0,
+        0,0,105,103,1,0,0,0,105,106,1,0,0,0,106,15,1,0,0,0,107,105,1,0,0,
+        0,108,109,3,26,13,0,109,110,5,33,0,0,110,17,1,0,0,0,111,116,3,16,
+        8,0,112,113,5,31,0,0,113,115,3,16,8,0,114,112,1,0,0,0,115,118,1,
+        0,0,0,116,114,1,0,0,0,116,117,1,0,0,0,117,19,1,0,0,0,118,116,1,0,
+        0,0,119,124,3,22,11,0,120,121,5,31,0,0,121,123,3,22,11,0,122,120,
+        1,0,0,0,123,126,1,0,0,0,124,122,1,0,0,0,124,125,1,0,0,0,125,21,1,
+        0,0,0,126,124,1,0,0,0,127,128,3,26,13,0,128,129,5,33,0,0,129,132,
+        1,0,0,0,130,132,3,24,12,0,131,127,1,0,0,0,131,130,1,0,0,0,132,23,
+        1,0,0,0,133,134,5,24,0,0,134,135,5,33,0,0,135,136,3,26,13,0,136,
+        139,5,33,0,0,137,138,5,18,0,0,138,140,5,33,0,0,139,137,1,0,0,0,139,
+        140,1,0,0,0,140,25,1,0,0,0,141,142,7,0,0,0,142,27,1,0,0,0,16,30,
+        32,39,45,52,59,64,71,77,84,86,105,116,124,131,139
     ]
 
 class ClagParser ( Parser ):
@@ -75,72 +69,78 @@ class ClagParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'agent'", "'beliefs:'", "'desires:'", 
-                     "'plans:'", "'when:'", "'contains:'", "'do'", "'end'", 
-                     "'believe'", "'disbelieve'", "'achieve'", "'abandon'", 
-                     "'environment'", "'perceptions:'", "'actions:'", "'percept'", 
-                     "'change'", "<INVALID>", "','", "'('", "')'", "';'" ]
+    literalNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "','", "'.'" ]
 
-    symbolicNames = [ "<INVALID>", "AGENT", "BELIEFS", "DESIRES", "PLANS", 
-                      "WHEN", "CONTAINS", "DO", "END", "BELIEVE", "DISBELIEVE", 
-                      "ACHIEVE", "ABANDON", "ENVIRONMENT", "PERCEPTIONS", 
-                      "ACTIONS", "PERCEPT", "CHANGE", "ID", "COMMA", "LPAREN", 
-                      "RPAREN", "SEMI", "WS" ]
+    symbolicNames = [ "<INVALID>", "AGENT", "ENVIRONMENT", "THAT", "BELIEVES", 
+                      "DESIRES", "WHEN", "IF", "THEN", "DO", "PERCEIVES", 
+                      "HAS", "WITH", "AND", "PLANS", "ACTIONS", "USING", 
+                      "CAN", "VIA", "ACHIEVE", "ABANDON", "DISBELIEVE", 
+                      "PERCEPT", "CHANGE", "SEND", "RECEIVE", "MESSAGE", 
+                      "TO", "FROM", "BROADCAST", "CHANNEL", "COMMA", "DOT", 
+                      "ID", "WS" ]
 
     RULE_system = 0
-    RULE_entity = 1
-    RULE_agent = 2
-    RULE_agent_section = 3
-    RULE_beliefs = 4
-    RULE_desires = 5
-    RULE_agent_plans = 6
-    RULE_agent_plan = 7
-    RULE_condition_list = 8
-    RULE_condition = 9
-    RULE_action = 10
-    RULE_action_list = 11
-    RULE_agent_action_type = 12
-    RULE_environment = 13
-    RULE_environment_section = 14
-    RULE_perceptions = 15
-    RULE_environment_plans = 16
-    RULE_env_plan = 17
-    RULE_env_action_list = 18
-    RULE_env_action = 19
-    RULE_env_action_type = 20
-    RULE_id_list = 21
+    RULE_agentDef = 1
+    RULE_thatClause = 2
+    RULE_environmentDef = 3
+    RULE_thatEnvClause = 4
+    RULE_plan = 5
+    RULE_actionDef = 6
+    RULE_idList = 7
+    RULE_condition = 8
+    RULE_conditionList = 9
+    RULE_actionList = 10
+    RULE_action = 11
+    RULE_sendAction = 12
+    RULE_actionType = 13
 
-    ruleNames =  [ "system", "entity", "agent", "agent_section", "beliefs", 
-                   "desires", "agent_plans", "agent_plan", "condition_list", 
-                   "condition", "action", "action_list", "agent_action_type", 
-                   "environment", "environment_section", "perceptions", 
-                   "environment_plans", "env_plan", "env_action_list", "env_action", 
-                   "env_action_type", "id_list" ]
+    ruleNames =  [ "system", "agentDef", "thatClause", "environmentDef", 
+                   "thatEnvClause", "plan", "actionDef", "idList", "condition", 
+                   "conditionList", "actionList", "action", "sendAction", 
+                   "actionType" ]
 
     EOF = Token.EOF
     AGENT=1
-    BELIEFS=2
-    DESIRES=3
-    PLANS=4
-    WHEN=5
-    CONTAINS=6
-    DO=7
-    END=8
-    BELIEVE=9
-    DISBELIEVE=10
-    ACHIEVE=11
-    ABANDON=12
-    ENVIRONMENT=13
-    PERCEPTIONS=14
+    ENVIRONMENT=2
+    THAT=3
+    BELIEVES=4
+    DESIRES=5
+    WHEN=6
+    IF=7
+    THEN=8
+    DO=9
+    PERCEIVES=10
+    HAS=11
+    WITH=12
+    AND=13
+    PLANS=14
     ACTIONS=15
-    PERCEPT=16
-    CHANGE=17
-    ID=18
-    COMMA=19
-    LPAREN=20
-    RPAREN=21
-    SEMI=22
-    WS=23
+    USING=16
+    CAN=17
+    VIA=18
+    ACHIEVE=19
+    ABANDON=20
+    DISBELIEVE=21
+    PERCEPT=22
+    CHANGE=23
+    SEND=24
+    RECEIVE=25
+    MESSAGE=26
+    TO=27
+    FROM=28
+    BROADCAST=29
+    CHANNEL=30
+    COMMA=31
+    DOT=32
+    ID=33
+    WS=34
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -158,11 +158,18 @@ class ClagParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def entity(self, i:int=None):
+        def agentDef(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(ClagParser.EntityContext)
+                return self.getTypedRuleContexts(ClagParser.AgentDefContext)
             else:
-                return self.getTypedRuleContext(ClagParser.EntityContext,i)
+                return self.getTypedRuleContext(ClagParser.AgentDefContext,i)
+
+
+        def environmentDef(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ClagParser.EnvironmentDefContext)
+            else:
+                return self.getTypedRuleContext(ClagParser.EnvironmentDefContext,i)
 
 
         def getRuleIndex(self):
@@ -186,15 +193,29 @@ class ClagParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 47
+            self.state = 30 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==1 or _la==13:
-                self.state = 44
-                self.entity()
-                self.state = 49
+            while True:
+                self.state = 30
+                self._errHandler.sync(self)
+                token = self._input.LA(1)
+                if token in [1]:
+                    self.state = 28
+                    self.agentDef()
+                    pass
+                elif token in [2]:
+                    self.state = 29
+                    self.environmentDef()
+                    pass
+                else:
+                    raise NoViableAltException(self)
+
+                self.state = 32 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
+                if not (_la==1 or _la==2):
+                    break
 
         except RecognitionException as re:
             localctx.exception = re
@@ -205,66 +226,7 @@ class ClagParser ( Parser ):
         return localctx
 
 
-    class EntityContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def agent(self):
-            return self.getTypedRuleContext(ClagParser.AgentContext,0)
-
-
-        def environment(self):
-            return self.getTypedRuleContext(ClagParser.EnvironmentContext,0)
-
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_entity
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEntity" ):
-                listener.enterEntity(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEntity" ):
-                listener.exitEntity(self)
-
-
-
-
-    def entity(self):
-
-        localctx = ClagParser.EntityContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_entity)
-        try:
-            self.state = 52
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [1]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 50
-                self.agent()
-                pass
-            elif token in [13]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 51
-                self.environment()
-                pass
-            else:
-                raise NoViableAltException(self)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class AgentContext(ParserRuleContext):
+    class AgentDefContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -277,47 +239,49 @@ class ClagParser ( Parser ):
         def ID(self):
             return self.getToken(ClagParser.ID, 0)
 
-        def agent_section(self, i:int=None):
+        def thatClause(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(ClagParser.Agent_sectionContext)
+                return self.getTypedRuleContexts(ClagParser.ThatClauseContext)
             else:
-                return self.getTypedRuleContext(ClagParser.Agent_sectionContext,i)
+                return self.getTypedRuleContext(ClagParser.ThatClauseContext,i)
 
 
         def getRuleIndex(self):
-            return ClagParser.RULE_agent
+            return ClagParser.RULE_agentDef
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAgent" ):
-                listener.enterAgent(self)
+            if hasattr( listener, "enterAgentDef" ):
+                listener.enterAgentDef(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAgent" ):
-                listener.exitAgent(self)
+            if hasattr( listener, "exitAgentDef" ):
+                listener.exitAgentDef(self)
 
 
 
 
-    def agent(self):
+    def agentDef(self):
 
-        localctx = ClagParser.AgentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_agent)
+        localctx = ClagParser.AgentDefContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 2, self.RULE_agentDef)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 54
+            self.state = 34
             self.match(ClagParser.AGENT)
-            self.state = 55
+            self.state = 35
             self.match(ClagParser.ID)
-            self.state = 59
+            self.state = 37 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 28) != 0):
-                self.state = 56
-                self.agent_section()
-                self.state = 61
+            while True:
+                self.state = 36
+                self.thatClause()
+                self.state = 39 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 69640) != 0)):
+                    break
 
         except RecognitionException as re:
             localctx.exception = re
@@ -328,61 +292,396 @@ class ClagParser ( Parser ):
         return localctx
 
 
-    class Agent_sectionContext(ParserRuleContext):
+    class ThatClauseContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def beliefs(self):
-            return self.getTypedRuleContext(ClagParser.BeliefsContext,0)
+
+        def getRuleIndex(self):
+            return ClagParser.RULE_thatClause
+
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
 
 
-        def desires(self):
-            return self.getTypedRuleContext(ClagParser.DesiresContext,0)
+
+    class AgentDesiresContext(ThatClauseContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ClagParser.ThatClauseContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def THAT(self):
+            return self.getToken(ClagParser.THAT, 0)
+        def DESIRES(self):
+            return self.getToken(ClagParser.DESIRES, 0)
+        def TO(self):
+            return self.getToken(ClagParser.TO, 0)
+        def idList(self):
+            return self.getTypedRuleContext(ClagParser.IdListContext,0)
+
+        def AND(self):
+            return self.getToken(ClagParser.AND, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAgentDesires" ):
+                listener.enterAgentDesires(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAgentDesires" ):
+                listener.exitAgentDesires(self)
 
 
-        def agent_plans(self):
-            return self.getTypedRuleContext(ClagParser.Agent_plansContext,0)
+    class AgentBeliefsContext(ThatClauseContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ClagParser.ThatClauseContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def THAT(self):
+            return self.getToken(ClagParser.THAT, 0)
+        def BELIEVES(self):
+            return self.getToken(ClagParser.BELIEVES, 0)
+        def idList(self):
+            return self.getTypedRuleContext(ClagParser.IdListContext,0)
+
+        def AND(self):
+            return self.getToken(ClagParser.AND, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAgentBeliefs" ):
+                listener.enterAgentBeliefs(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAgentBeliefs" ):
+                listener.exitAgentBeliefs(self)
+
+
+    class AgentPlansContext(ThatClauseContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ClagParser.ThatClauseContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def WITH(self):
+            return self.getToken(ClagParser.WITH, 0)
+        def PLANS(self):
+            return self.getToken(ClagParser.PLANS, 0)
+        def plan(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ClagParser.PlanContext)
+            else:
+                return self.getTypedRuleContext(ClagParser.PlanContext,i)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAgentPlans" ):
+                listener.enterAgentPlans(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAgentPlans" ):
+                listener.exitAgentPlans(self)
+
+
+    class AgentCHANNELContext(ThatClauseContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ClagParser.ThatClauseContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def USING(self):
+            return self.getToken(ClagParser.USING, 0)
+        def CHANNEL(self):
+            return self.getToken(ClagParser.CHANNEL, 0)
+        def ID(self):
+            return self.getToken(ClagParser.ID, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAgentCHANNEL" ):
+                listener.enterAgentCHANNEL(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAgentCHANNEL" ):
+                listener.exitAgentCHANNEL(self)
+
+
+
+    def thatClause(self):
+
+        localctx = ClagParser.ThatClauseContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 4, self.RULE_thatClause)
+        self._la = 0 # Token type
+        try:
+            self.state = 64
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
+            if la_ == 1:
+                localctx = ClagParser.AgentBeliefsContext(self, localctx)
+                self.enterOuterAlt(localctx, 1)
+                self.state = 41
+                self.match(ClagParser.THAT)
+                self.state = 42
+                self.match(ClagParser.BELIEVES)
+                self.state = 43
+                self.idList()
+                self.state = 45
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==13:
+                    self.state = 44
+                    self.match(ClagParser.AND)
+
+
+                pass
+
+            elif la_ == 2:
+                localctx = ClagParser.AgentDesiresContext(self, localctx)
+                self.enterOuterAlt(localctx, 2)
+                self.state = 47
+                self.match(ClagParser.THAT)
+                self.state = 48
+                self.match(ClagParser.DESIRES)
+                self.state = 49
+                self.match(ClagParser.TO)
+                self.state = 50
+                self.idList()
+                self.state = 52
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==13:
+                    self.state = 51
+                    self.match(ClagParser.AND)
+
+
+                pass
+
+            elif la_ == 3:
+                localctx = ClagParser.AgentPlansContext(self, localctx)
+                self.enterOuterAlt(localctx, 3)
+                self.state = 54
+                self.match(ClagParser.WITH)
+                self.state = 55
+                self.match(ClagParser.PLANS)
+                self.state = 57 
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while True:
+                    self.state = 56
+                    self.plan()
+                    self.state = 59 
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+                    if not (_la==33):
+                        break
+
+                pass
+
+            elif la_ == 4:
+                localctx = ClagParser.AgentCHANNELContext(self, localctx)
+                self.enterOuterAlt(localctx, 4)
+                self.state = 61
+                self.match(ClagParser.USING)
+                self.state = 62
+                self.match(ClagParser.CHANNEL)
+                self.state = 63
+                self.match(ClagParser.ID)
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class EnvironmentDefContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ENVIRONMENT(self):
+            return self.getToken(ClagParser.ENVIRONMENT, 0)
+
+        def ID(self):
+            return self.getToken(ClagParser.ID, 0)
+
+        def thatEnvClause(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ClagParser.ThatEnvClauseContext)
+            else:
+                return self.getTypedRuleContext(ClagParser.ThatEnvClauseContext,i)
 
 
         def getRuleIndex(self):
-            return ClagParser.RULE_agent_section
+            return ClagParser.RULE_environmentDef
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAgent_section" ):
-                listener.enterAgent_section(self)
+            if hasattr( listener, "enterEnvironmentDef" ):
+                listener.enterEnvironmentDef(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAgent_section" ):
-                listener.exitAgent_section(self)
+            if hasattr( listener, "exitEnvironmentDef" ):
+                listener.exitEnvironmentDef(self)
 
 
 
 
-    def agent_section(self):
+    def environmentDef(self):
 
-        localctx = ClagParser.Agent_sectionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_agent_section)
+        localctx = ClagParser.EnvironmentDefContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_environmentDef)
+        self._la = 0 # Token type
         try:
-            self.state = 65
+            self.enterOuterAlt(localctx, 1)
+            self.state = 66
+            self.match(ClagParser.ENVIRONMENT)
+            self.state = 67
+            self.match(ClagParser.ID)
+            self.state = 69 
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while True:
+                self.state = 68
+                self.thatEnvClause()
+                self.state = 71 
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if not (_la==3 or _la==12):
+                    break
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ThatEnvClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+
+        def getRuleIndex(self):
+            return ClagParser.RULE_thatEnvClause
+
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+
+    class EnvActionsContext(ThatEnvClauseContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ClagParser.ThatEnvClauseContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def WITH(self):
+            return self.getToken(ClagParser.WITH, 0)
+        def ACTIONS(self):
+            return self.getToken(ClagParser.ACTIONS, 0)
+        def actionDef(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ClagParser.ActionDefContext)
+            else:
+                return self.getTypedRuleContext(ClagParser.ActionDefContext,i)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEnvActions" ):
+                listener.enterEnvActions(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEnvActions" ):
+                listener.exitEnvActions(self)
+
+
+    class EnvPerceptionsContext(ThatEnvClauseContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ClagParser.ThatEnvClauseContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def THAT(self):
+            return self.getToken(ClagParser.THAT, 0)
+        def PERCEIVES(self):
+            return self.getToken(ClagParser.PERCEIVES, 0)
+        def idList(self):
+            return self.getTypedRuleContext(ClagParser.IdListContext,0)
+
+        def AND(self):
+            return self.getToken(ClagParser.AND, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEnvPerceptions" ):
+                listener.enterEnvPerceptions(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEnvPerceptions" ):
+                listener.exitEnvPerceptions(self)
+
+
+
+    def thatEnvClause(self):
+
+        localctx = ClagParser.ThatEnvClauseContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_thatEnvClause)
+        self._la = 0 # Token type
+        try:
+            self.state = 86
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [2]:
+            if token in [3]:
+                localctx = ClagParser.EnvPerceptionsContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 62
-                self.beliefs()
+                self.state = 73
+                self.match(ClagParser.THAT)
+                self.state = 74
+                self.match(ClagParser.PERCEIVES)
+                self.state = 75
+                self.idList()
+                self.state = 77
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==13:
+                    self.state = 76
+                    self.match(ClagParser.AND)
+
+
                 pass
-            elif token in [3]:
+            elif token in [12]:
+                localctx = ClagParser.EnvActionsContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 63
-                self.desires()
-                pass
-            elif token in [4]:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 64
-                self.agent_plans()
+                self.state = 79
+                self.match(ClagParser.WITH)
+                self.state = 80
+                self.match(ClagParser.ACTIONS)
+                self.state = 82 
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while True:
+                    self.state = 81
+                    self.actionDef()
+                    self.state = 84 
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+                    if not (_la==9):
+                        break
+
                 pass
             else:
                 raise NoViableAltException(self)
@@ -396,160 +695,7 @@ class ClagParser ( Parser ):
         return localctx
 
 
-    class BeliefsContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def BELIEFS(self):
-            return self.getToken(ClagParser.BELIEFS, 0)
-
-        def id_list(self):
-            return self.getTypedRuleContext(ClagParser.Id_listContext,0)
-
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_beliefs
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBeliefs" ):
-                listener.enterBeliefs(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBeliefs" ):
-                listener.exitBeliefs(self)
-
-
-
-
-    def beliefs(self):
-
-        localctx = ClagParser.BeliefsContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_beliefs)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 67
-            self.match(ClagParser.BELIEFS)
-            self.state = 68
-            self.id_list()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class DesiresContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def DESIRES(self):
-            return self.getToken(ClagParser.DESIRES, 0)
-
-        def id_list(self):
-            return self.getTypedRuleContext(ClagParser.Id_listContext,0)
-
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_desires
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDesires" ):
-                listener.enterDesires(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDesires" ):
-                listener.exitDesires(self)
-
-
-
-
-    def desires(self):
-
-        localctx = ClagParser.DesiresContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_desires)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 70
-            self.match(ClagParser.DESIRES)
-            self.state = 71
-            self.id_list()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Agent_plansContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def PLANS(self):
-            return self.getToken(ClagParser.PLANS, 0)
-
-        def agent_plan(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(ClagParser.Agent_planContext)
-            else:
-                return self.getTypedRuleContext(ClagParser.Agent_planContext,i)
-
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_agent_plans
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAgent_plans" ):
-                listener.enterAgent_plans(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAgent_plans" ):
-                listener.exitAgent_plans(self)
-
-
-
-
-    def agent_plans(self):
-
-        localctx = ClagParser.Agent_plansContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_agent_plans)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 73
-            self.match(ClagParser.PLANS)
-            self.state = 77
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==18:
-                self.state = 74
-                self.agent_plan()
-                self.state = 79
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Agent_planContext(ParserRuleContext):
+    class PlanContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -559,83 +705,55 @@ class ClagParser ( Parser ):
         def ID(self):
             return self.getToken(ClagParser.ID, 0)
 
-        def LPAREN(self):
-            return self.getToken(ClagParser.LPAREN, 0)
-
         def WHEN(self):
             return self.getToken(ClagParser.WHEN, 0)
 
-        def action(self):
-            return self.getTypedRuleContext(ClagParser.ActionContext,0)
+        def conditionList(self):
+            return self.getTypedRuleContext(ClagParser.ConditionListContext,0)
 
 
-        def RPAREN(self):
-            return self.getToken(ClagParser.RPAREN, 0)
+        def THEN(self):
+            return self.getToken(ClagParser.THEN, 0)
 
-        def DO(self):
-            return self.getToken(ClagParser.DO, 0)
-
-        def action_list(self):
-            return self.getTypedRuleContext(ClagParser.Action_listContext,0)
+        def actionList(self):
+            return self.getTypedRuleContext(ClagParser.ActionListContext,0)
 
 
-        def END(self):
-            return self.getToken(ClagParser.END, 0)
-
-        def CONTAINS(self):
-            return self.getToken(ClagParser.CONTAINS, 0)
-
-        def condition_list(self):
-            return self.getTypedRuleContext(ClagParser.Condition_listContext,0)
-
+        def DOT(self):
+            return self.getToken(ClagParser.DOT, 0)
 
         def getRuleIndex(self):
-            return ClagParser.RULE_agent_plan
+            return ClagParser.RULE_plan
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAgent_plan" ):
-                listener.enterAgent_plan(self)
+            if hasattr( listener, "enterPlan" ):
+                listener.enterPlan(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAgent_plan" ):
-                listener.exitAgent_plan(self)
+            if hasattr( listener, "exitPlan" ):
+                listener.exitPlan(self)
 
 
 
 
-    def agent_plan(self):
+    def plan(self):
 
-        localctx = ClagParser.Agent_planContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_agent_plan)
-        self._la = 0 # Token type
+        localctx = ClagParser.PlanContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 10, self.RULE_plan)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 80
-            self.match(ClagParser.ID)
-            self.state = 81
-            self.match(ClagParser.LPAREN)
-            self.state = 82
-            self.match(ClagParser.WHEN)
-            self.state = 83
-            self.action()
-            self.state = 86
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==6:
-                self.state = 84
-                self.match(ClagParser.CONTAINS)
-                self.state = 85
-                self.condition_list()
-
-
             self.state = 88
-            self.match(ClagParser.RPAREN)
+            self.match(ClagParser.ID)
             self.state = 89
-            self.match(ClagParser.DO)
+            self.match(ClagParser.WHEN)
             self.state = 90
-            self.action_list()
+            self.conditionList()
             self.state = 91
-            self.match(ClagParser.END)
+            self.match(ClagParser.THEN)
+            self.state = 92
+            self.actionList()
+            self.state = 93
+            self.match(ClagParser.DOT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -645,19 +763,75 @@ class ClagParser ( Parser ):
         return localctx
 
 
-    class Condition_listContext(ParserRuleContext):
+    class ActionDefContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def condition(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(ClagParser.ConditionContext)
-            else:
-                return self.getTypedRuleContext(ClagParser.ConditionContext,i)
+        def DO(self):
+            return self.getToken(ClagParser.DO, 0)
 
+        def ID(self):
+            return self.getToken(ClagParser.ID, 0)
+
+        def actionList(self):
+            return self.getTypedRuleContext(ClagParser.ActionListContext,0)
+
+
+        def DOT(self):
+            return self.getToken(ClagParser.DOT, 0)
+
+        def getRuleIndex(self):
+            return ClagParser.RULE_actionDef
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterActionDef" ):
+                listener.enterActionDef(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitActionDef" ):
+                listener.exitActionDef(self)
+
+
+
+
+    def actionDef(self):
+
+        localctx = ClagParser.ActionDefContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 12, self.RULE_actionDef)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 95
+            self.match(ClagParser.DO)
+            self.state = 96
+            self.match(ClagParser.ID)
+            self.state = 97
+            self.actionList()
+            self.state = 98
+            self.match(ClagParser.DOT)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class IdListContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self, i:int=None):
+            if i is None:
+                return self.getTokens(ClagParser.ID)
+            else:
+                return self.getToken(ClagParser.ID, i)
 
         def COMMA(self, i:int=None):
             if i is None:
@@ -666,37 +840,37 @@ class ClagParser ( Parser ):
                 return self.getToken(ClagParser.COMMA, i)
 
         def getRuleIndex(self):
-            return ClagParser.RULE_condition_list
+            return ClagParser.RULE_idList
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCondition_list" ):
-                listener.enterCondition_list(self)
+            if hasattr( listener, "enterIdList" ):
+                listener.enterIdList(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCondition_list" ):
-                listener.exitCondition_list(self)
+            if hasattr( listener, "exitIdList" ):
+                listener.exitIdList(self)
 
 
 
 
-    def condition_list(self):
+    def idList(self):
 
-        localctx = ClagParser.Condition_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_condition_list)
+        localctx = ClagParser.IdListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 14, self.RULE_idList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 93
-            self.condition()
-            self.state = 98
+            self.state = 100
+            self.match(ClagParser.ID)
+            self.state = 105
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==19:
-                self.state = 94
+            while _la==31:
+                self.state = 101
                 self.match(ClagParser.COMMA)
-                self.state = 95
-                self.condition()
-                self.state = 100
+                self.state = 102
+                self.match(ClagParser.ID)
+                self.state = 107
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -716,8 +890,8 @@ class ClagParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def agent_action_type(self):
-            return self.getTypedRuleContext(ClagParser.Agent_action_typeContext,0)
+        def actionType(self):
+            return self.getTypedRuleContext(ClagParser.ActionTypeContext,0)
 
 
         def ID(self):
@@ -740,12 +914,12 @@ class ClagParser ( Parser ):
     def condition(self):
 
         localctx = ClagParser.ConditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_condition)
+        self.enterRule(localctx, 16, self.RULE_condition)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 101
-            self.agent_action_type()
-            self.state = 102
+            self.state = 108
+            self.actionType()
+            self.state = 109
             self.match(ClagParser.ID)
         except RecognitionException as re:
             localctx.exception = re
@@ -756,44 +930,61 @@ class ClagParser ( Parser ):
         return localctx
 
 
-    class ActionContext(ParserRuleContext):
+    class ConditionListContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def agent_action_type(self):
-            return self.getTypedRuleContext(ClagParser.Agent_action_typeContext,0)
+        def condition(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ClagParser.ConditionContext)
+            else:
+                return self.getTypedRuleContext(ClagParser.ConditionContext,i)
 
 
-        def ID(self):
-            return self.getToken(ClagParser.ID, 0)
+        def COMMA(self, i:int=None):
+            if i is None:
+                return self.getTokens(ClagParser.COMMA)
+            else:
+                return self.getToken(ClagParser.COMMA, i)
 
         def getRuleIndex(self):
-            return ClagParser.RULE_action
+            return ClagParser.RULE_conditionList
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAction" ):
-                listener.enterAction(self)
+            if hasattr( listener, "enterConditionList" ):
+                listener.enterConditionList(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAction" ):
-                listener.exitAction(self)
+            if hasattr( listener, "exitConditionList" ):
+                listener.exitConditionList(self)
 
 
 
 
-    def action(self):
+    def conditionList(self):
 
-        localctx = ClagParser.ActionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_action)
+        localctx = ClagParser.ConditionListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 18, self.RULE_conditionList)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 104
-            self.agent_action_type()
-            self.state = 105
-            self.match(ClagParser.ID)
+            self.state = 111
+            self.condition()
+            self.state = 116
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==31:
+                self.state = 112
+                self.match(ClagParser.COMMA)
+                self.state = 113
+                self.condition()
+                self.state = 118
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -803,7 +994,7 @@ class ClagParser ( Parser ):
         return localctx
 
 
-    class Action_listContext(ParserRuleContext):
+    class ActionListContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -824,37 +1015,37 @@ class ClagParser ( Parser ):
                 return self.getToken(ClagParser.COMMA, i)
 
         def getRuleIndex(self):
-            return ClagParser.RULE_action_list
+            return ClagParser.RULE_actionList
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAction_list" ):
-                listener.enterAction_list(self)
+            if hasattr( listener, "enterActionList" ):
+                listener.enterActionList(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAction_list" ):
-                listener.exitAction_list(self)
+            if hasattr( listener, "exitActionList" ):
+                listener.exitActionList(self)
 
 
 
 
-    def action_list(self):
+    def actionList(self):
 
-        localctx = ClagParser.Action_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_action_list)
+        localctx = ClagParser.ActionListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 20, self.RULE_actionList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 107
+            self.state = 119
             self.action()
-            self.state = 112
+            self.state = 124
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==19:
-                self.state = 108
+            while _la==31:
+                self.state = 120
                 self.match(ClagParser.COMMA)
-                self.state = 109
+                self.state = 121
                 self.action()
-                self.state = 114
+                self.state = 126
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -867,172 +1058,57 @@ class ClagParser ( Parser ):
         return localctx
 
 
-    class Agent_action_typeContext(ParserRuleContext):
+    class ActionContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def BELIEVE(self):
-            return self.getToken(ClagParser.BELIEVE, 0)
+        def actionType(self):
+            return self.getTypedRuleContext(ClagParser.ActionTypeContext,0)
 
-        def DISBELIEVE(self):
-            return self.getToken(ClagParser.DISBELIEVE, 0)
-
-        def ACHIEVE(self):
-            return self.getToken(ClagParser.ACHIEVE, 0)
-
-        def ABANDON(self):
-            return self.getToken(ClagParser.ABANDON, 0)
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_agent_action_type
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAgent_action_type" ):
-                listener.enterAgent_action_type(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAgent_action_type" ):
-                listener.exitAgent_action_type(self)
-
-
-
-
-    def agent_action_type(self):
-
-        localctx = ClagParser.Agent_action_typeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_agent_action_type)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 115
-            _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 7680) != 0)):
-                self._errHandler.recoverInline(self)
-            else:
-                self._errHandler.reportMatch(self)
-                self.consume()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class EnvironmentContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def ENVIRONMENT(self):
-            return self.getToken(ClagParser.ENVIRONMENT, 0)
 
         def ID(self):
             return self.getToken(ClagParser.ID, 0)
 
-        def environment_section(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(ClagParser.Environment_sectionContext)
-            else:
-                return self.getTypedRuleContext(ClagParser.Environment_sectionContext,i)
+        def sendAction(self):
+            return self.getTypedRuleContext(ClagParser.SendActionContext,0)
 
 
         def getRuleIndex(self):
-            return ClagParser.RULE_environment
+            return ClagParser.RULE_action
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEnvironment" ):
-                listener.enterEnvironment(self)
+            if hasattr( listener, "enterAction" ):
+                listener.enterAction(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEnvironment" ):
-                listener.exitEnvironment(self)
+            if hasattr( listener, "exitAction" ):
+                listener.exitAction(self)
 
 
 
 
-    def environment(self):
+    def action(self):
 
-        localctx = ClagParser.EnvironmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_environment)
-        self._la = 0 # Token type
+        localctx = ClagParser.ActionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 22, self.RULE_action)
         try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 117
-            self.match(ClagParser.ENVIRONMENT)
-            self.state = 118
-            self.match(ClagParser.ID)
-            self.state = 122
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==14 or _la==15:
-                self.state = 119
-                self.environment_section()
-                self.state = 124
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Environment_sectionContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def perceptions(self):
-            return self.getTypedRuleContext(ClagParser.PerceptionsContext,0)
-
-
-        def environment_plans(self):
-            return self.getTypedRuleContext(ClagParser.Environment_plansContext,0)
-
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_environment_section
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEnvironment_section" ):
-                listener.enterEnvironment_section(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEnvironment_section" ):
-                listener.exitEnvironment_section(self)
-
-
-
-
-    def environment_section(self):
-
-        localctx = ClagParser.Environment_sectionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_environment_section)
-        try:
-            self.state = 127
+            self.state = 131
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [14]:
+            if token in [4, 19, 20, 21, 22, 23]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 125
-                self.perceptions()
+                self.state = 127
+                self.actionType()
+                self.state = 128
+                self.match(ClagParser.ID)
                 pass
-            elif token in [15]:
+            elif token in [24]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 126
-                self.environment_plans()
+                self.state = 130
+                self.sendAction()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -1046,113 +1122,67 @@ class ClagParser ( Parser ):
         return localctx
 
 
-    class PerceptionsContext(ParserRuleContext):
+    class SendActionContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def PERCEPTIONS(self):
-            return self.getToken(ClagParser.PERCEPTIONS, 0)
+        def SEND(self):
+            return self.getToken(ClagParser.SEND, 0)
 
-        def id_list(self):
-            return self.getTypedRuleContext(ClagParser.Id_listContext,0)
+        def ID(self, i:int=None):
+            if i is None:
+                return self.getTokens(ClagParser.ID)
+            else:
+                return self.getToken(ClagParser.ID, i)
 
+        def actionType(self):
+            return self.getTypedRuleContext(ClagParser.ActionTypeContext,0)
+
+
+        def VIA(self):
+            return self.getToken(ClagParser.VIA, 0)
 
         def getRuleIndex(self):
-            return ClagParser.RULE_perceptions
+            return ClagParser.RULE_sendAction
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPerceptions" ):
-                listener.enterPerceptions(self)
+            if hasattr( listener, "enterSendAction" ):
+                listener.enterSendAction(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPerceptions" ):
-                listener.exitPerceptions(self)
+            if hasattr( listener, "exitSendAction" ):
+                listener.exitSendAction(self)
 
 
 
 
-    def perceptions(self):
+    def sendAction(self):
 
-        localctx = ClagParser.PerceptionsContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_perceptions)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 129
-            self.match(ClagParser.PERCEPTIONS)
-            self.state = 130
-            self.id_list()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Environment_plansContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def ACTIONS(self):
-            return self.getToken(ClagParser.ACTIONS, 0)
-
-        def env_plan(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(ClagParser.Env_planContext)
-            else:
-                return self.getTypedRuleContext(ClagParser.Env_planContext,i)
-
-
-        def COMMA(self, i:int=None):
-            if i is None:
-                return self.getTokens(ClagParser.COMMA)
-            else:
-                return self.getToken(ClagParser.COMMA, i)
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_environment_plans
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEnvironment_plans" ):
-                listener.enterEnvironment_plans(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEnvironment_plans" ):
-                listener.exitEnvironment_plans(self)
-
-
-
-
-    def environment_plans(self):
-
-        localctx = ClagParser.Environment_plansContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_environment_plans)
+        localctx = ClagParser.SendActionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 24, self.RULE_sendAction)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 132
-            self.match(ClagParser.ACTIONS)
-
             self.state = 133
-            self.env_plan()
-            self.state = 138
+            self.match(ClagParser.SEND)
+            self.state = 134
+            self.match(ClagParser.ID)
+            self.state = 135
+            self.actionType()
+            self.state = 136
+            self.match(ClagParser.ID)
+            self.state = 139
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==19:
-                self.state = 134
-                self.match(ClagParser.COMMA)
-                self.state = 135
-                self.env_plan()
-                self.state = 140
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
+            if _la==18:
+                self.state = 137
+                self.match(ClagParser.VIA)
+                self.state = 138
+                self.match(ClagParser.ID)
+
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1163,180 +1193,24 @@ class ClagParser ( Parser ):
         return localctx
 
 
-    class Env_planContext(ParserRuleContext):
+    class ActionTypeContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def ID(self):
-            return self.getToken(ClagParser.ID, 0)
+        def ACHIEVE(self):
+            return self.getToken(ClagParser.ACHIEVE, 0)
 
-        def DO(self):
-            return self.getToken(ClagParser.DO, 0)
+        def ABANDON(self):
+            return self.getToken(ClagParser.ABANDON, 0)
 
-        def env_action_list(self):
-            return self.getTypedRuleContext(ClagParser.Env_action_listContext,0)
+        def BELIEVES(self):
+            return self.getToken(ClagParser.BELIEVES, 0)
 
-
-        def END(self):
-            return self.getToken(ClagParser.END, 0)
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_env_plan
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEnv_plan" ):
-                listener.enterEnv_plan(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEnv_plan" ):
-                listener.exitEnv_plan(self)
-
-
-
-
-    def env_plan(self):
-
-        localctx = ClagParser.Env_planContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_env_plan)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 141
-            self.match(ClagParser.ID)
-            self.state = 142
-            self.match(ClagParser.DO)
-            self.state = 143
-            self.env_action_list()
-            self.state = 144
-            self.match(ClagParser.END)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Env_action_listContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def env_action(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(ClagParser.Env_actionContext)
-            else:
-                return self.getTypedRuleContext(ClagParser.Env_actionContext,i)
-
-
-        def COMMA(self, i:int=None):
-            if i is None:
-                return self.getTokens(ClagParser.COMMA)
-            else:
-                return self.getToken(ClagParser.COMMA, i)
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_env_action_list
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEnv_action_list" ):
-                listener.enterEnv_action_list(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEnv_action_list" ):
-                listener.exitEnv_action_list(self)
-
-
-
-
-    def env_action_list(self):
-
-        localctx = ClagParser.Env_action_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_env_action_list)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 146
-            self.env_action()
-            self.state = 151
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==19:
-                self.state = 147
-                self.match(ClagParser.COMMA)
-                self.state = 148
-                self.env_action()
-                self.state = 153
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Env_actionContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def env_action_type(self):
-            return self.getTypedRuleContext(ClagParser.Env_action_typeContext,0)
-
-
-        def ID(self):
-            return self.getToken(ClagParser.ID, 0)
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_env_action
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEnv_action" ):
-                listener.enterEnv_action(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEnv_action" ):
-                listener.exitEnv_action(self)
-
-
-
-
-    def env_action(self):
-
-        localctx = ClagParser.Env_actionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_env_action)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 154
-            self.env_action_type()
-            self.state = 155
-            self.match(ClagParser.ID)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Env_action_typeContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
+        def DISBELIEVE(self):
+            return self.getToken(ClagParser.DISBELIEVE, 0)
 
         def PERCEPT(self):
             return self.getToken(ClagParser.PERCEPT, 0)
@@ -1345,96 +1219,33 @@ class ClagParser ( Parser ):
             return self.getToken(ClagParser.CHANGE, 0)
 
         def getRuleIndex(self):
-            return ClagParser.RULE_env_action_type
+            return ClagParser.RULE_actionType
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEnv_action_type" ):
-                listener.enterEnv_action_type(self)
+            if hasattr( listener, "enterActionType" ):
+                listener.enterActionType(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEnv_action_type" ):
-                listener.exitEnv_action_type(self)
+            if hasattr( listener, "exitActionType" ):
+                listener.exitActionType(self)
 
 
 
 
-    def env_action_type(self):
+    def actionType(self):
 
-        localctx = ClagParser.Env_action_typeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_env_action_type)
+        localctx = ClagParser.ActionTypeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 26, self.RULE_actionType)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 157
+            self.state = 141
             _la = self._input.LA(1)
-            if not(_la==16 or _la==17):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 16252944) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Id_listContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def ID(self, i:int=None):
-            if i is None:
-                return self.getTokens(ClagParser.ID)
-            else:
-                return self.getToken(ClagParser.ID, i)
-
-        def COMMA(self, i:int=None):
-            if i is None:
-                return self.getTokens(ClagParser.COMMA)
-            else:
-                return self.getToken(ClagParser.COMMA, i)
-
-        def getRuleIndex(self):
-            return ClagParser.RULE_id_list
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterId_list" ):
-                listener.enterId_list(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitId_list" ):
-                listener.exitId_list(self)
-
-
-
-
-    def id_list(self):
-
-        localctx = ClagParser.Id_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_id_list)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 159
-            self.match(ClagParser.ID)
-            self.state = 164
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==19:
-                self.state = 160
-                self.match(ClagParser.COMMA)
-                self.state = 161
-                self.match(ClagParser.ID)
-                self.state = 166
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)

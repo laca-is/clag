@@ -1,25 +1,12 @@
-agent Driver
-beliefs: Budget
-desires: CheckPrice
-plans:
-    CheckPrice(
-        when: achieve CheckPrice 
-        contains: believe Budget, achieve Parking)
-    do
-        achieve OfferMade
-    end
-    NoSpots(
-        when: achieve NoSpotsAvailable )
-    do
-        disbelieve Parking
-    end
+Agent Manager
+  that believes spotPrice
+  using channel parkingChannel
+  with plans
+    send_price when achieve sendPrice, believes spotPrice then send Driver achieve checkPrice via parkingChannel.
 
-environment Parking
-perceptions: SoldSpots
-actions:
-    ParkSpot do
-        percept Spot
-    end
-    LeaveSpot do
-        change Spot
-    end
+Agent Driver
+  that desires to park and believes budget
+  using channel parkingChannel
+  TODO in environment City
+  with plans
+    ask_price when achieve park then send Manager achieve sendPrice via parkingChannel, believes parked.

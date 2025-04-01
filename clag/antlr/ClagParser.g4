@@ -2,31 +2,33 @@ parser grammar ClagParser;
 
 options { tokenVocab=ClagLexer; }
 
-system: entity*;
+system: (agentDef | environmentDef)+;
 
-entity: agent | environment;
+agentDef: AGENT ID thatClause+;
+thatClause:
+    THAT BELIEVES idList AND?       #agentBeliefs
+  | THAT DESIRES TO idList AND?        #agentDesires
+  | WITH PLANS plan+          #agentPlans
+  | USING CHANNEL ID               #agentCHANNEL
+;
 
-agent: AGENT ID agent_section*;
-agent_section: beliefs | desires | agent_plans;
-beliefs: BELIEFS id_list;
-desires: DESIRES id_list;
-agent_plans: PLANS agent_plan*;
+environmentDef: ENVIRONMENT ID thatEnvClause+;
+thatEnvClause:
+    THAT PERCEIVES idList AND?      #envPerceptions
+  | WITH ACTIONS actionDef+   #envActions
+;
 
-agent_plan: ID LPAREN WHEN action (CONTAINS condition_list)? RPAREN DO action_list END;
-condition_list: condition (COMMA condition)*;
-condition: agent_action_type ID;
-action: agent_action_type ID;
-action_list: action (COMMA action)*;
-agent_action_type: BELIEVE | DISBELIEVE | ACHIEVE | ABANDON;
+plan: ID WHEN conditionList THEN actionList DOT;
+actionDef: DO ID actionList DOT;
 
-environment: ENVIRONMENT ID environment_section*;
-environment_section: perceptions | environment_plans;
-perceptions: PERCEPTIONS id_list;
-environment_plans: ACTIONS (env_plan (COMMA env_plan)*);
+idList: ID (COMMA ID)*;
+condition: actionType ID;
+conditionList: condition (COMMA condition)*;
+actionList: action (COMMA action)*;
+action: 
+    actionType ID
+  | sendAction
+;
 
-env_plan: ID DO env_action_list END;
-env_action_list: env_action (COMMA env_action)*;
-env_action: env_action_type ID;
-env_action_type: PERCEPT | CHANGE;
-
-id_list: ID (COMMA ID)*;
+sendAction: SEND ID actionType ID (VIA ID)?;
+actionType: ACHIEVE | ABANDON | BELIEVES | DISBELIEVE | PERCEPT | CHANGE;
