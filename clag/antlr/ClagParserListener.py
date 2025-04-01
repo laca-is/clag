@@ -26,39 +26,12 @@ class ClagParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ClagParser#agentBeliefs.
-    def enterAgentBeliefs(self, ctx:ClagParser.AgentBeliefsContext):
+    # Enter a parse tree produced by ClagParser#agentSection.
+    def enterAgentSection(self, ctx:ClagParser.AgentSectionContext):
         pass
 
-    # Exit a parse tree produced by ClagParser#agentBeliefs.
-    def exitAgentBeliefs(self, ctx:ClagParser.AgentBeliefsContext):
-        pass
-
-
-    # Enter a parse tree produced by ClagParser#agentDesires.
-    def enterAgentDesires(self, ctx:ClagParser.AgentDesiresContext):
-        pass
-
-    # Exit a parse tree produced by ClagParser#agentDesires.
-    def exitAgentDesires(self, ctx:ClagParser.AgentDesiresContext):
-        pass
-
-
-    # Enter a parse tree produced by ClagParser#agentPlans.
-    def enterAgentPlans(self, ctx:ClagParser.AgentPlansContext):
-        pass
-
-    # Exit a parse tree produced by ClagParser#agentPlans.
-    def exitAgentPlans(self, ctx:ClagParser.AgentPlansContext):
-        pass
-
-
-    # Enter a parse tree produced by ClagParser#agentCHANNEL.
-    def enterAgentCHANNEL(self, ctx:ClagParser.AgentCHANNELContext):
-        pass
-
-    # Exit a parse tree produced by ClagParser#agentCHANNEL.
-    def exitAgentCHANNEL(self, ctx:ClagParser.AgentCHANNELContext):
+    # Exit a parse tree produced by ClagParser#agentSection.
+    def exitAgentSection(self, ctx:ClagParser.AgentSectionContext):
         pass
 
 
@@ -71,21 +44,12 @@ class ClagParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ClagParser#envPerceptions.
-    def enterEnvPerceptions(self, ctx:ClagParser.EnvPerceptionsContext):
+    # Enter a parse tree produced by ClagParser#environmentSection.
+    def enterEnvironmentSection(self, ctx:ClagParser.EnvironmentSectionContext):
         pass
 
-    # Exit a parse tree produced by ClagParser#envPerceptions.
-    def exitEnvPerceptions(self, ctx:ClagParser.EnvPerceptionsContext):
-        pass
-
-
-    # Enter a parse tree produced by ClagParser#envActions.
-    def enterEnvActions(self, ctx:ClagParser.EnvActionsContext):
-        pass
-
-    # Exit a parse tree produced by ClagParser#envActions.
-    def exitEnvActions(self, ctx:ClagParser.EnvActionsContext):
+    # Exit a parse tree produced by ClagParser#environmentSection.
+    def exitEnvironmentSection(self, ctx:ClagParser.EnvironmentSectionContext):
         pass
 
 
@@ -95,15 +59,6 @@ class ClagParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by ClagParser#plan.
     def exitPlan(self, ctx:ClagParser.PlanContext):
-        pass
-
-
-    # Enter a parse tree produced by ClagParser#actionDef.
-    def enterActionDef(self, ctx:ClagParser.ActionDefContext):
-        pass
-
-    # Exit a parse tree produced by ClagParser#actionDef.
-    def exitActionDef(self, ctx:ClagParser.ActionDefContext):
         pass
 
 

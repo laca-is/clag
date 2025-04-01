@@ -1,37 +1,23 @@
 lexer grammar ClagLexer;
 
-AGENT:         'agent' | 'Agent';
-ENVIRONMENT:   'environment' | 'Environment';
-THAT:          'that' | 'That';
-BELIEVES:      'believes' | 'Believes' | 'believe' | 'Believe';
-DESIRES:       'desires' | 'Desires';
-WHEN:          'when' | 'When';
-IF:            'if' | 'If';
-THEN:          'then' | 'Then';
-DO:            'do' | 'Do';
-PERCEIVES:     'perceives' | 'Perceives';
-HAS:           'has' | 'Has';
-WITH:          'with' | 'With';
-AND:           'and' | 'And';
-PLANS:         'plans' | 'Plans';
-ACTIONS:       'actions' | 'Actions';
-USING:         'using' | 'Using';
-CAN:           'can' | 'Can';
-VIA:           'via' | 'Via';
+AGENT:         [aA]'gent';
+ENVIRONMENT:   [eE]'nvironment';
+THAT:          [tT]'hat';
+BELIEVES:      [bB]'elieves' | [bB]'elieve';
+DESIRES:       [dD]'esires';
+PERCEIVES:     [pP]'erceives';
+WHEN:          [wW]'hen';
+THEN:          [tT]'hen';
+WITH:          [wW]'ith';
+VIA:           [vV]'ia';
+TO:            [tT]'o';
+IN:            [iI]'n';
 
-ACHIEVE:       'achieve' | 'Achieve' | 'achieves' | 'Achieves';
-ABANDON:       'abandon' | 'Abandon';
-DISBELIEVE:    'disbelieve' | 'Disbelieve';
-PERCEPT:       'percept' | 'Percept';
-CHANGE:        'change' | 'Change';
-
-SEND:          'send' | 'Send';
-RECEIVE:       'receive' | 'Receive';
-MESSAGE:       'message' | 'Message';
-TO:            'to' | 'To';
-FROM:          'from' | 'From';
-BROADCAST:     'broadcast' | 'Broadcast';
-CHANNEL:      'channel' | 'Channel';
+ACHIEVE:       [aA]'chieve';
+ABANDON:       [aA]'bandon';
+PERCEPT:       [pP]'ercept';
+CHANGE:        [cC]'hange';
+SEND:          [sS]'end';
 
 COMMA:        ',';
 DOT:          '.';

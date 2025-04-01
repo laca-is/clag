@@ -1,12 +1,13 @@
-Agent Manager
-  that believes spotPrice
-  using channel parkingChannel
-  with plans
-    send_price when achieve sendPrice, believes spotPrice then send Driver achieve checkPrice via parkingChannel.
-
 Agent Driver
   that desires to park and believes budget
   using channel parkingChannel
   TODO in environment City
   with plans
     ask_price when achieve park then send Manager achieve sendPrice via parkingChannel, believes parked.
+
+Agent Manager
+  that believes spotPrice
+  using channel parkingChannel
+  with plans
+    send_price when achieve sendPrice, believes spotPrice then send Driver achieve checkPrice via parkingChannel.
+
