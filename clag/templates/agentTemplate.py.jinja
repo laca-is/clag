@@ -10,7 +10,7 @@ class {{ agent.name }}Agent(Agent):
         {% endfor %}
 
     {% for plan in agent.plans %}
-    @pl(gain, {{plan.conditions|dataType}}{% if plan.context %}, {{ plan.context|dataType }}{% endif %})
+    @pl(gain, [{{ plan.conditions|dataType }}]{% if plan.context %}, [{{ plan.context|dataType }}]{% endif %})
     def {{ plan.name }}(self, src):
         {% for action in plan.actions %}
         {% if action.type == 'send' %}

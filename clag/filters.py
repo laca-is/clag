@@ -5,13 +5,18 @@ _goal_ctx_types = ['achieve', 'abandon']
 
 def data_type_to_str(data):
     """Handle context strings from split action/condition components"""
-    print(data)
-    if data[0].BELIEVES():
-        return f'Belief({data[1]})'
-    return data
+    if isinstance(data, list):
+        return ', '.join(data_type_to_str(item) for item in data)
     
-    click.echo(f'[ERROR] Invalid operation: {contextType} {context}')
-    exit()
+    if isinstance(data, tuple):
+        ctx, name = data
+        if hasattr(ctx, 'BELIEVES') and ctx.BELIEVES():
+            return f'Belief("{name}")'
+        elif hasattr(ctx, 'DESIRES') and ctx.DESIRES():
+            return f'Goal("{name}")'
+        return f'"{name}"'
+    
+    return str(data)
 
 def conditions_to_str(conditions):
     """Process conditions list of strings (["believe X", "achieve Y"])"""

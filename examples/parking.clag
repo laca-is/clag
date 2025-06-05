@@ -4,6 +4,7 @@ Agent Driver
   in environment City
   with plans
     ask_price when achieve parking with desires to park then send Manager achieve sendPrice via parkingChannel, believes parked.
+    test when achieve parking then achieve nothing.
 
 Agent Manager
   believes spotPrice
