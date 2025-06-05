@@ -17,4 +17,4 @@ def build_output_file(agents, envs, output_file):
         f.write('from maspy import *\n\n')
         f.write(agent_jinja_template.render(agents=agents))
         f.write(env_jinja_template.render(envs=envs))
-        f.write(main_jinja_template.render(agents=agents)) 
+        f.write(main_jinja_template.render(agents=agents, envs=envs)) 

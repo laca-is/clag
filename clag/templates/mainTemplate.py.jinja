@@ -1,16 +1,21 @@
 def main():
-    {% for agent in agents %}
-    {{ agent.name|lower }} = {{ agent.name }}()
-    {% endfor %}
-
     {% for env in envs %}
     {{ env.name|lower }} = {{ env.name }}("{{ env.name }}")
+    {% endfor %}
+
+    {% for agent in agents %}
+    {{ agent.name|lower }} = {{ agent.name }}()
     {% endfor %}
 
     {% for agent in agents %}
     {% if agent.channel %}
     {{ agent.name|lower }}.connect_to("{{ agent.channel }}")
     {% endif %}
+    {% endfor %}
+
+    agent_list = [{% for agent in agents %}{{ agent.name|lower }}{% if not loop.last %}, {% endif %}{% endfor %}]
+    {% for env in envs %}
+    Admin().connect_to(agent_list, {{ env.name|lower }})
     {% endfor %}
 
     Admin().start_system()
