@@ -1,0 +1,28 @@
+{% for agent in agents %}
+class {{ agent.name }}(Agent):
+    def __init__(self, agt_name=None):
+        super().__init__(agt_name)
+        {% for belief in agent.beliefs %}
+        self.add(Belief("{{ belief }}", adds_event=False))
+        {% endfor %}
+        {% for desire in agent.desires %}
+        self.add(Goal("{{ desire }}"))
+        {% endfor %}
+        {% if agent.channel %}
+        self.connect_to("{{ agent.channel }}")
+        {% endif %}
+
+    {% for plan in agent.plans %}
+    @pl(gain, {% for condition in plan.conditions %}{% if not loop.first %}, {% endif %}{% if condition[0] == 'believes' %}Belief("{{ condition[1] }}"){% else %}Goal("{{ condition[1] }}"){% endif %}{% endfor %}{% if plan.context %}{% for context in plan.context %}, {% if context[0] == 'believes' %}Belief("{{ context[1] }}"){% else %}Goal("{{ context[1] }}"){% endif %}{% endfor %}{% endif %})
+    def {{ plan.name }}(self, src{% for condition in plan.conditions %}, {{ condition[1] }}{% endfor %}{% if plan.context %}{% for context in plan.context %}, {{ context[1] }}{% endfor %}{% endif %}):
+        {% for action in plan.actions %}
+        {% if action.type == 'send' %}
+        self.send('{{ action.details.receiver }}', achieve, Goal("{{ action.details.content|replace('achieve', '')|trim }}"), "{{ action.details.protocol }}")
+        {% else %}
+        self.add(Goal("{{ action.details.goal }}"))
+        {% endif %}
+        {% endfor %}
+        
+    {% endfor %}
+
+{% endfor %}

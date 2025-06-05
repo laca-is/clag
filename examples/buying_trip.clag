@@ -1,0 +1,24 @@
+Agent Seller
+  desires to announce
+  using channel TripChannel
+  in environment Website
+  with plans
+    create_trips when achieve announce then achieve nothing.
+    trip_bought when achieve buy, believes trip then send Buyer achieve travel_ticket via TripChannel.
+    improve_trip when achieve improve then achieve nothing.
+
+Agent Buyer
+  believes preferences
+  desires to buyTrip
+  using channel TripChannel
+  in environment Website
+  with plans
+    search_trip when achieve buyTrip, believes preferences then achieve nothing.
+    check_trip when achieve check, believes preferences then achieve nothing.
+    ticket_received when believes travel_ticket then achieve nothing.
+
+Environment Website
+  that perceives trip
+  with actions
+    announce_trip.
+    delist_trip. 

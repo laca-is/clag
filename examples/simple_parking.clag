@@ -1,0 +1,18 @@
+Agent Driver
+  believes budget
+  desires to park
+  using channel ParkingChannel
+  in environment Parking
+  with plans
+    ask_price when achieve parking, believes budget then send Manager achieve sendPrice via ParkingChannel.
+    park_car when achieve checkPrice, believes budget then achieve nothing.
+
+Agent Manager
+  believes spotPrice
+  using channel ParkingChannel
+  with plans
+    send_price when achieve sendPrice, believes spotPrice then send Driver achieve checkPrice via ParkingChannel.
+
+Environment Parking
+  that perceives spot
+  with achieve nothing. 

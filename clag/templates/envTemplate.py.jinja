@@ -1,0 +1,14 @@
+{% for env in envs %}
+class {{ env.name }}(Environment):
+    def __init__(self, env_name):
+        super().__init__(env_name)
+        {% for perception in env.perceptions %}
+        self.create(Percept("{{ perception }}", False))
+        {% endfor %}
+
+    {% for action in env.actions %}
+    def {{ action }}(self, agt, data):
+        pass
+    {% endfor %}
+
+{% endfor %}

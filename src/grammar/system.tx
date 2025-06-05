@@ -1,7 +1,0 @@
-import agent
-import env
-
-Entities:
-    (agents*=Agent
-    envs*=Environment)#
-;

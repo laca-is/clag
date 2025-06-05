@@ -1,0 +1,12 @@
+Agent Sender
+  believes sender
+  desires to send_info
+  using channel SimpleChannel
+  with plans
+    send_hello when achieve send_info, believes sender then send Receiver achieve receive_info via SimpleChannel.
+
+Agent Receiver
+  believes receiver
+  using channel SimpleChannel
+  with plans
+    receive_hello when achieve receive_info, believes receiver then achieve nothing. 

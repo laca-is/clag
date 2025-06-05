@@ -1,0 +1,4 @@
+Agent HelloAgent
+  believes hello
+  with plans
+    say_hello when believes hello then achieve nothing. 
