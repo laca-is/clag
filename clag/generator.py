@@ -1,6 +1,5 @@
 import jinja2
 from os.path import dirname, join
-import clag.filters
 
 def build_output_file(agents, envs, output_file):
     file_name = dirname(__file__)
@@ -9,12 +8,6 @@ def build_output_file(agents, envs, output_file):
         loader=jinja2.FileSystemLoader(join(file_name, "templates")),
         trim_blocks=True, lstrip_blocks=True
     )
-
-    jinja_env.filters.update({
-        'dataType': clag.filters.data_type_to_str,
-        'conditionsStr': clag.filters.conditions_to_str,
-        'changeStr': clag.filters.change_to_srt
-    })
 
     agent_jinja_template = jinja_env.get_template('agentTemplate.py.jinja')
     env_jinja_template = jinja_env.get_template('envTemplate.py.jinja')

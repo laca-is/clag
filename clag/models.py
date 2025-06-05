@@ -1,6 +1,6 @@
 class Action:
     def __init__(self, action_type, details=None):
-        self.type = action_type  # 'send', 'achieve', 'abandon', 'believes', 'percept', 'change', 'desires'
+        self.type = action_type  
         self.details = details or {}
 
 class SendAction(Action):
@@ -22,9 +22,9 @@ class GenericAction(Action):
 class Plan:
     def __init__(self, name, conditions=None, context=None, actions=None):
         self.name = name
-        self.conditions = conditions or []  # List of (condition_type, condition_value)
-        self.context = context or []  # List of (context_type, context_value)
-        self.actions = actions or []  # List of Action objects
+        self.conditions = conditions or [] 
+        self.context = context or [] 
+        self.actions = actions or [] 
 
 class Message:
     def __init__(self, receiver, content, protocol):
@@ -45,4 +45,4 @@ class Environment:
     def __init__(self, name):
         self.name = name
         self.perceptions = []
-        self.actions = []  # List of action names 
+        self.actions = []
