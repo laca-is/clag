@@ -15,6 +15,7 @@ IN:            [iI]'n';
 USING:         [uU]'sing';
 CHANNEL:       [cC]'hannel';
 PLANS:         [pP]'lans';
+ACTIONS:       [aA]'ctions';
 
 ACHIEVE:       [aA]'chieve';
 ABANDON:       [aA]'bandon';
@@ -25,5 +26,7 @@ SEND:          [sS]'end';
 COMMA:        ',';
 DOT:          '.';
 AND:          'and' | 'AND';
+LPAREN:       '(';
+RPAREN:       ')';
 ID:           [a-zA-Z_][a-zA-Z0-9_]*;
 WS:           [ \t\r\n]+ -> skip;

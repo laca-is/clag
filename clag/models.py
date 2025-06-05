@@ -45,4 +45,4 @@ class Environment:
     def __init__(self, name):
         self.name = name
         self.perceptions = []
-        self.actions = [] 
+        self.actions = []  # List of action names 

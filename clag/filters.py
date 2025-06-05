@@ -41,3 +41,7 @@ def change_to_srt(contextType, decorator):
     
     click.echo(f'[ERROR] Unknown context type: {contextType}')
     exit()
+
+def trim(value):
+    """Remove leading and trailing whitespace"""
+    return value.strip()

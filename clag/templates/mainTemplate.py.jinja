@@ -1,10 +1,19 @@
-if __name__ == '__main__':
+def main():
     {% for agent in agents %}
-    {{ agent.name|lower }} = {{ agent.name }}Agent('{{ agent.name|lower }}')
+    {{ agent.name|lower }} = {{ agent.name }}()
     {% endfor %}
-    
+
     {% for env in envs %}
-    {{ env.name|lower }}_env = {{ env.name }}Environment('{{ env.name|lower }}_env')
+    {{ env.name|lower }} = {{ env.name }}("{{ env.name }}")
+    {% endfor %}
+
+    {% for agent in agents %}
+    {% if agent.channel %}
+    {{ agent.name|lower }}.connect_to("{{ agent.channel }}")
+    {% endif %}
     {% endfor %}
 
     Admin().start_system()
+
+if __name__ == "__main__":
+    main()

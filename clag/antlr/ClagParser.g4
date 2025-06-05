@@ -15,8 +15,10 @@ agentSection:
 environmentDef: ENVIRONMENT ID environmentSection+;
 environmentSection:
     THAT PERCEIVES idList
-  | WITH action+
+  | WITH ACTIONS actionName+
 ;
+
+actionName: ID DOT;
 
 plan: ID WHEN conditionList (WITH contextList)? THEN actionList DOT;
 

@@ -15,6 +15,13 @@ class ClagListener(ClagParserListener):
         self.agents.append(self.current_agent)
         self.current_agent = None
 
+    def enterEnvironmentDef(self, ctx):
+        self.current_env = Environment(ctx.ID().getText())
+
+    def exitEnvironmentDef(self, ctx):
+        self.envs.append(self.current_env)
+        self.current_env = None
+
     def enterAgentSection(self, ctx):
         if self.current_agent:
             if ctx.BELIEVES():
@@ -25,6 +32,18 @@ class ClagListener(ClagParserListener):
                 self.current_agent.channel = ctx.ID().getText()
             elif ctx.ENVIRONMENT():
                 self.current_agent.environment = ctx.ID().getText()
+
+    def enterEnvironmentSection(self, ctx):
+        if self.current_env:
+            if ctx.THAT() and ctx.PERCEIVES():
+                self.current_env.perceptions = [t.getText() for t in ctx.idList().ID()]
+            elif ctx.WITH() and ctx.ACTIONS():
+                # Parse environment actions
+                for action_ctx in ctx.actionName():
+                    self.current_env.actions.append(action_ctx.ID().getText())
+
+    def exitEnvironmentSection(self, ctx):
+        pass
 
     def _parse_action(self, action_ctx, default_protocol):
         """Parse an action context into an Action object."""
@@ -60,8 +79,4 @@ class ClagListener(ClagParserListener):
     def enterAction(self, ctx):
         if self.current_env:
             action = self._parse_action(ctx, self.current_env.name)
-            self.current_env.actions.append(action)
-
-    def enterEnvironmentSection(self, ctx):
-        if self.current_env and ctx.THAT() and ctx.PERCEIVES():
-            self.current_env.perceptions = [t.getText() for t in ctx.idList().ID()] 
+            self.current_env.actions.append(action) 

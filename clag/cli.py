@@ -18,5 +18,11 @@ def build(file_name, output_file):
             print(f"    Plan: {plan['name']}")
             print(f"    Conditions: {[c[1] for c in plan['conditions']]}")
             print(f"    Context: {plan['context']}")
-            print(f"    Actions: {[a for a in plan['actions']]}\n")
+            print(f"    Actions: {[a for a in plan['actions']]}")
+    # Environment debug printing
+    for env in envs:
+        print('-------------------------------')
+        print(f"Environment: {env.name}")
+        print(f"Perceptions: {env.perceptions}")
+        print(f"Actions: {env.actions}")
     build_output_file(agents, envs, output_file)

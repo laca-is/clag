@@ -1,0 +1,1 @@
+java -jar .\clag\antlr\antlr-4.13.2-complete.jar -no-visitor .\clag\antlr\*.g4 -Dlanguage=Python3

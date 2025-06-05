@@ -1,37 +1,63 @@
 from maspy import *
-class DriverAgent(Agent):
-    def __init__(self, name=None):
-        super().__init__(name)
-        self.add(Belief('budget'))
-        self.add(Goal('park'))
-        self.add(Goal('drive'))
 
-    @pl(gain, ["parking"], ["park"])
-    def ask_price(self, src):
-        self.send(
-            content=,
-            receiver=,
-            protocol=''
-        )
-    @pl(gain, ["parking"])
-    def test(self, src):
+class Seller(Agent):
+    def __init__(self, agt_name=None):
+        super().__init__(agt_name)
+        self.add(Goal("announce"))
+        self.connect_to("TripChannel")
 
-class ManagerAgent(Agent):
-    def __init__(self, name=None):
-        super().__init__(name)
-        self.add(Belief('spotPrice'))
+    @pl(gain, Goal("announce"))
+    def create_trips(self, src, announce):
+        self.add(Goal("nothing"))
+        
+    @pl(gain, Goal("buy"), Goal("trip"))
+    def trip_bought(self, src, buy, trip):
+        self.send('Buyer', achieve, Goal("travel_ticket"), "TripChannel")
+        
+    @pl(gain, Goal("improve"))
+    def improve_trip(self, src, improve):
+        self.add(Goal("nothing"))
+        
 
-    @pl(gain, ["sendPrice", "spotPrice"])
-    def send_price(self, src):
-        self.send(
-            content=,
-            receiver=,
-            protocol=''
-        )
+class Buyer(Agent):
+    def __init__(self, agt_name=None):
+        super().__init__(agt_name)
+        self.add(Belief("preferences", adds_event=False))
+        self.add(Goal("buyTrip"))
+        self.connect_to("TripChannel")
 
-if __name__ == '__main__':
-    driver = DriverAgent('driver')
-    manager = ManagerAgent('manager')
-    
+    @pl(gain, Goal("buyTrip"), Goal("preferences"))
+    def search_trip(self, src, buyTrip, preferences):
+        self.add(Goal("nothing"))
+        
+    @pl(gain, Goal("check"), Goal("preferences"))
+    def check_trip(self, src, check, preferences):
+        self.add(Goal("nothing"))
+        
+    @pl(gain, Goal("travel_ticket"))
+    def ticket_received(self, src, travel_ticket):
+        self.add(Goal("nothing"))
+        
+
+class Website(Environment):
+    def __init__(self, env_name):
+        super().__init__(env_name)
+        self.create(Percept("trip", False))
+
+    def announce_trip(self, agt, data):
+        pass
+    def delist_trip(self, agt, data):
+        pass
+
+def main():
+    seller = Seller()
+    buyer = Buyer()
+
+
+    seller.connect_to("TripChannel")
+    buyer.connect_to("TripChannel")
 
     Admin().start_system()
+
+if __name__ == "__main__":
+    main()
