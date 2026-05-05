@@ -1,4 +1,4 @@
-# Generated from ./clag/antlr/ClagParser.g4 by ANTLR 4.13.2
+# Generated from clag/antlr/ClagParser.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
     from .ClagParser import ClagParser
@@ -32,6 +32,60 @@ class ClagParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by ClagParser#agentSection.
     def exitAgentSection(self, ctx:ClagParser.AgentSectionContext):
+        pass
+
+
+    # Enter a parse tree produced by ClagParser#beliefDefList.
+    def enterBeliefDefList(self, ctx:ClagParser.BeliefDefListContext):
+        pass
+
+    # Exit a parse tree produced by ClagParser#beliefDefList.
+    def exitBeliefDefList(self, ctx:ClagParser.BeliefDefListContext):
+        pass
+
+
+    # Enter a parse tree produced by ClagParser#beliefDef.
+    def enterBeliefDef(self, ctx:ClagParser.BeliefDefContext):
+        pass
+
+    # Exit a parse tree produced by ClagParser#beliefDef.
+    def exitBeliefDef(self, ctx:ClagParser.BeliefDefContext):
+        pass
+
+
+    # Enter a parse tree produced by ClagParser#goalDefList.
+    def enterGoalDefList(self, ctx:ClagParser.GoalDefListContext):
+        pass
+
+    # Exit a parse tree produced by ClagParser#goalDefList.
+    def exitGoalDefList(self, ctx:ClagParser.GoalDefListContext):
+        pass
+
+
+    # Enter a parse tree produced by ClagParser#goalDef.
+    def enterGoalDef(self, ctx:ClagParser.GoalDefContext):
+        pass
+
+    # Exit a parse tree produced by ClagParser#goalDef.
+    def exitGoalDef(self, ctx:ClagParser.GoalDefContext):
+        pass
+
+
+    # Enter a parse tree produced by ClagParser#valueList.
+    def enterValueList(self, ctx:ClagParser.ValueListContext):
+        pass
+
+    # Exit a parse tree produced by ClagParser#valueList.
+    def exitValueList(self, ctx:ClagParser.ValueListContext):
+        pass
+
+
+    # Enter a parse tree produced by ClagParser#value.
+    def enterValue(self, ctx:ClagParser.ValueContext):
+        pass
+
+    # Exit a parse tree produced by ClagParser#value.
+    def exitValue(self, ctx:ClagParser.ValueContext):
         pass
 
 
@@ -116,12 +170,30 @@ class ClagParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ClagParser#askAction.
+    def enterAskAction(self, ctx:ClagParser.AskActionContext):
+        pass
+
+    # Exit a parse tree produced by ClagParser#askAction.
+    def exitAskAction(self, ctx:ClagParser.AskActionContext):
+        pass
+
+
     # Enter a parse tree produced by ClagParser#sendAction.
     def enterSendAction(self, ctx:ClagParser.SendActionContext):
         pass
 
     # Exit a parse tree produced by ClagParser#sendAction.
     def exitSendAction(self, ctx:ClagParser.SendActionContext):
+        pass
+
+
+    # Enter a parse tree produced by ClagParser#actType.
+    def enterActType(self, ctx:ClagParser.ActTypeContext):
+        pass
+
+    # Exit a parse tree produced by ClagParser#actType.
+    def exitActType(self, ctx:ClagParser.ActTypeContext):
         pass
 
 

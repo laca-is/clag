@@ -3,12 +3,25 @@ class {{ env.name }}(Environment):
     def __init__(self, env_name):
         super().__init__(env_name)
         {% for perception in env.perceptions %}
-        self.create(Percept("{{ perception }}", False))
+        self.create(Percept("{{ perception }}"))
         {% endfor %}
 
     {% for action in env.actions %}
-    def {{ action }}(self, agt, data):
+    def {{ action.name }}(self, agt, data):
+        {% if action.effect == 'remove' %}
+        percept = self.get(Percept("{{ action.target_percept }}"))
+        if percept:
+            self.delete(percept)
+        {% elif action.effect == 'create' %}
+        self.create(Percept("{{ action.target_percept }}"))
+        {% elif action.effect == 'change' %}
+        percept = self.get(Percept("{{ action.target_percept }}"))
+        if percept:
+            self.delete(percept)
+        self.create(Percept("{{ action.target_percept }}"))
+        {% else %}
         pass
+        {% endif %}
     {% endfor %}
 
 {% endfor %}

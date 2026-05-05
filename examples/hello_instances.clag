@@ -1,0 +1,5 @@
+create 3 drone agents
+  believes status is idle
+  with plans
+    start when achieve takeoff then
+      achieve hover.

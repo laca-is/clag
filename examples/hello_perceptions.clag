@@ -1,0 +1,4 @@
+Agent SelectiveObserver
+  in environment SensorRoom
+  focusing on temperature, pressure
+  ignoring noise, vibration

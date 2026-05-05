@@ -1,0 +1,4 @@
+Agent Inserter
+  with plans
+    resupply when loses belief object then
+      achieve restock.

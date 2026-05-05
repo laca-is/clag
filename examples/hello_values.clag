@@ -1,0 +1,7 @@
+Agent Seller
+  believes price is 50
+  believes stock is 10, 20, 30
+  desires to sell_item with premium
+  with plans
+    sell when achieve sell_item then
+      achieve dummy.

@@ -3,14 +3,28 @@ options { tokenVocab=ClagLexer; }
 
 system: (agentDef | environmentDef)+;
 
-agentDef: AGENT ID agentSection+;
+agentDef:
+    AGENT ID agentSection+
+  | CREATE NUMBER ID AGENTS agentSection+
+;
 agentSection:
-  DESIRES TO idList AND?
-  | BELIEVES idList AND?
-  | IN ENVIRONMENT ID
-  | USING CHANNEL ID
+  DESIRES TO goalDefList AND?
+  | BELIEVES beliefDefList AND?
+  | IN ENVIRONMENT ID AND?
+  | FOCUSING ON idList AND?
+  | IGNORING idList AND?
+  | USING CHANNEL ID AND?
   | WITH PLANS plan+
 ;
+
+beliefDefList: beliefDef (COMMA beliefDef)*;
+beliefDef: ID (IS valueList)?;
+
+goalDefList: goalDef (COMMA goalDef)*;
+goalDef: ID (WITH valueList)?;
+
+valueList: value (COMMA value)*;
+value: ID | NUMBER | STRING | ANY;
 
 environmentDef: ENVIRONMENT ID environmentSection+;
 environmentSection:
@@ -18,7 +32,7 @@ environmentSection:
   | WITH ACTIONS actionName+
 ;
 
-actionName: ID DOT;
+actionName: ID (THAT (REMOVES | CREATES | CHANGES) ID)? DOT;
 
 plan: ID WHEN conditionList (WITH contextList)? THEN actionList DOT;
 
@@ -29,7 +43,21 @@ actionList: action (COMMA action)*;
 action: 
     actionType
   | sendAction
+  | askAction
 ;
 
-sendAction: SEND ID actionType (VIA ID)?;
-actionType: (ACHIEVE | ABANDON | BELIEVES | PERCEPT | CHANGE | DESIRES TO) ID;
+askAction: ASK (ID | EVERYONE) ABOUT ID (AND WAIT)? (VIA ID)?;
+
+sendAction: SEND (ID | EVERYONE) actType ID (VIA ID)?;
+actType:
+    TELL
+  | UNTELL
+  | TELL HOW
+  | UNTELL HOW
+  | ACHIEVE
+  | UNACHIEVE
+  | ASK ONE
+  | ASK ALL
+  | ASK HOW
+;
+actionType: (ACHIEVE | ABANDON | BELIEVES | PERCEPT | CHANGE | DESIRES TO? | LOSES BELIEVES | LOSES DESIRES TO?) ID;

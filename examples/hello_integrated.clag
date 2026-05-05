@@ -1,0 +1,33 @@
+Environment RescueZone
+  that perceives signal, obstacle, survivor
+  with actions
+    clear_path that removes obstacle.
+    deploy_beacon that creates signal.
+    move that changes survivor.
+
+Agent Coordinator
+  believes mission_status is active
+  believes sector
+  desires to rescue
+  using channel Radio
+  in environment RescueZone
+  focusing on signal, survivor
+  ignoring obstacle
+  with plans
+    start_rescue when achieve rescue then
+      send everyone achieve patrol via Radio.
+    survivor_found when believes survivor then
+      send everyone tell abort via Radio.
+    handle_emergency when loses belief mission_status then
+      send everyone tell abort via Radio.
+
+create 3 Drone agents
+  believes battery is 100
+  using channel Radio
+  in environment RescueZone
+  with plans
+    search when achieve patrol then
+      ask Coordinator about sector and wait via Radio,
+      achieve scan.
+    do_scan when achieve scan then
+      send Coordinator tell survivor via Radio.

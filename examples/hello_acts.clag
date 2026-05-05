@@ -1,0 +1,14 @@
+Agent Informer
+  with plans
+    share_info when believes has_data then
+      send Receiver tell data via MainChannel.
+    share_plan when believes has_plan then
+      send Learner tell how greet_plan via MainChannel.
+    revoke when believes outdated then
+      send Receiver untell old_data via MainChannel.
+    delegate when achieve task then
+      send Worker achieve work via TaskChannel.
+    cancel when achieve abort then
+      send Worker unachieve work via TaskChannel.
+    ask_question when achieve query then
+      send Expert ask one fact via QChannel.

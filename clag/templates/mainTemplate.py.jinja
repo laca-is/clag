@@ -3,20 +3,35 @@ def main():
     {{ env.name|lower }} = {{ env.name }}("{{ env.name }}")
     {% endfor %}
 
+    agent_list = []
     {% for agent in agents %}
-    {{ agent.name|lower }} = {{ agent.name }}()
-    {% endfor %}
-
-    {% for agent in agents %}
-    {% if agent.channel %}
-    {{ agent.name|lower }}.connect_to("{{ agent.channel }}")
+    {% if agent.instance_count > 1 %}
+    for i in range({{ agent.instance_count }}):
+        agent_list.append({{ agent.name }}())
+    {% else %}
+    agent_list.append({{ agent.name }}())
     {% endif %}
     {% endfor %}
 
-    agent_list = [{% for agent in agents %}{{ agent.name|lower }}{% if not loop.last %}, {% endif %}{% endfor %}]
-    {% for env in envs %}
-    Admin().connect_to(agent_list, {{ env.name|lower }})
+    {% set ns = namespace(channels=[]) %}
+    {% for agent in agents %}
+    {% if agent.channel and agent.channel not in ns.channels %}
+    {% set ns.channels = ns.channels + [agent.channel] %}
+    {% endif %}
     {% endfor %}
+    {% for ch in ns.channels %}
+    {{ ch|lower }}_ch = Channel("{{ ch }}")
+    {% endfor %}
+
+    connections = []
+    {% for env in envs %}
+    connections.append({{ env.name|lower }})
+    {% endfor %}
+    {% for ch in ns.channels %}
+    connections.append({{ ch|lower }}_ch)
+    {% endfor %}
+    if connections:
+        Admin().connect_to(agent_list, connections)
 
     Admin().start_system()
 

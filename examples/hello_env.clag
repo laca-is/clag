@@ -1,0 +1,6 @@
+Environment Shelf
+  that perceives object, shelf_status
+  with actions
+    take that removes object.
+    restock that creates object.
+    update that changes shelf_status.

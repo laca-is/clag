@@ -1,0 +1,4 @@
+Agent Announcer
+  with plans
+    announce when believes breaking_news then
+      send everyone achieve hear_news via NewsChannel.

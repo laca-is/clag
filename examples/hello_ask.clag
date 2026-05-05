@@ -1,0 +1,6 @@
+Agent Inquirer
+  with plans
+    seek_docs when achieve info then
+      ask Expert about knowledge and wait via QueryChannel.
+    seek_hints when achieve hint then
+      ask everyone about clue.
